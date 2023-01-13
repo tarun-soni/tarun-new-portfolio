@@ -8,7 +8,7 @@
 }
 
 .description {
-  display: inherit;
+  display: block;
   justify-content: inherit;
   align-items: inherit;
   font-size: 0.85rem;
@@ -16,6 +16,23 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  font-size: larger;
+}
+
+.description h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.description h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .description a {
