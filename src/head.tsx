@@ -1,7 +1,6 @@
 export default function Head() {
   return (
     <>
-
       <title>Tarun {`\u0027`}s portfolio</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
 
