@@ -7,7 +7,7 @@ import Link from 'next/link'
 import leftSideBarData from '@/utils/leftSidebarData'
 import { fonts } from '@/utils/fonts'
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="w-screen ">
       <Container extendedClasses="w-10/12  mx-auto my-16">
@@ -49,3 +49,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
