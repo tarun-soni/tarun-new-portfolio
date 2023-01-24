@@ -1,6 +1,6 @@
-interface LeftSideBarData {
-  title: string;
-  path: string;
+export interface LeftSideBarData {
+  title: '/wrote' | '/made' | '/talked'
+  path: string
   // icon: JSX.Element;
 }
 
@@ -11,15 +11,15 @@ const leftSideBarData: LeftSideBarData[] = [
     // icon: <FaIcons.FaBook />,
   },
   {
-    title: '/developed',
-    path: '/developed',
+    title: '/made',
+    path: '/made',
     // icon: <FaIcons.FaCode />,
   },
   {
-    title: '/talked-about',
-    path: '/talked-about',
+    title: '/talked',
+    path: '/talked',
     // icon: <FaIcons.FaComment />,
   },
-];
+]
 
-export default leftSideBarData;
+export default leftSideBarData

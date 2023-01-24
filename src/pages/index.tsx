@@ -3,8 +3,8 @@ import React from 'react'
 import Home from './home'
 
 const Main = () => (
-  // <Home />
-  <WIP />
+  <Home />
+  // <WIP />
 )
 
 export default Main
