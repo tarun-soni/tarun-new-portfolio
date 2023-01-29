@@ -32,11 +32,15 @@ const blogcards = [
 
 const gradients = [
   {
+    from: 'from-[#3EC8AC]',
+    via: 'via-[#4E90A4]',
+    to: 'to-[#743ad5]',
+  },
+  {
     from: 'from-[#6EE7B7]',
     via: 'via-[#3B82F6]',
     to: 'to-[#9333EA]',
   },
-  // add 3 more gradients here with different colors
   {
     from: 'from-[#464562]',
     via: 'via-[#0e1a64]',

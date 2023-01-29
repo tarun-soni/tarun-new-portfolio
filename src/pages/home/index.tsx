@@ -17,19 +17,19 @@ const Home = () => {
     useState<MidComponentTitles>('/home')
   return (
     <div className="w-screen h-screen overflow-hidden">
-      <Container extendedClasses="w-10/12  mx-auto my-16 border-red-900 flex ">
+      <Container extendedClasses="w-10/12  mx-auto my-16  flex ">
         {/* replace the webside bar with hamburger on small devices */}
-        {/* <div className="sm:hidden"> */}
+
         <WebSidebar
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
-        {/* </div> */}
 
         <div className="w-10/12 lg:max-w-4xl md:max-w-2xl">
           <div className="flex flex-col justify-center mt-20">
             <motion.div>
               <motion.h1
+                key={selectedRoute}
                 initial={{
                   y: 30,
                   opacity: 0,
@@ -39,8 +39,7 @@ const Home = () => {
                   opacity: 1,
                 }}
                 transition={{
-                  duration: 0.5,
-                  delay: 0.2,
+                  duration: 0.3,
                 }}
                 className={`
                 ${fonts.lexend} text-3xl tracking-widest`}>
@@ -69,14 +68,27 @@ const WebSidebar: FC<WebSidebarProps> = ({
   setSelectedRoute,
 }) => (
   <div className="flex flex-col w-1/5 h-screen">
-    <div className="flex flex-col justify-center">
-      <Image
-        src={profilePic}
-        alt="profile-photo"
-        width={100}
-        height={100}
-        className="rounded-xl ml-2 my-4"
-      />
+    <div className="flex flex-col justify-center ">
+      <motion.button
+        onClick={() => setSelectedRoute('/home')}
+        className="w-28 h-w-28 "
+        whileHover={{
+          scale: 1.07,
+        }}
+        whileTap={{
+          scale: 0.95,
+        }}
+        transition={{
+          duration: 0.1,
+        }}>
+        <Image
+          src={profilePic}
+          alt="profile-photo"
+          width={100}
+          height={100}
+          className="rounded-xl ml-2 my-4"
+        />
+      </motion.button>
 
       <h1 className={`text-2xl font-bold mt-10 ${fonts.lexend}`}>Tarun Soni</h1>
     </div>
@@ -88,7 +100,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
             <button
               onClick={() => setSelectedRoute(link.title)}
               className={`${fonts.sourceCodePro}
-            ${selectedRoute === link.title && 'text-gray-100'}
+            ${selectedRoute === link.title && 'text-white'}
                     text-xl font-bold text-gray-600 hover:text-gray-300 hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2`}>
               {link.title}
             </button>
