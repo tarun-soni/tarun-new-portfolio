@@ -1,3 +1,5 @@
+import { LeftSideBarData } from '@/utils/leftSidebarData'
+
 export interface MadeData {
   title?: string
   desc?: string
@@ -12,3 +14,5 @@ export interface MadeData {
 export interface CardProps<T> {
   data: T
 }
+
+export type MidComponentTitles = LeftSideBarData['title'] | '/about-me'

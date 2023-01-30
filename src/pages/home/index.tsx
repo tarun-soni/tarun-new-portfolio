@@ -1,18 +1,16 @@
 import Image from 'next/image'
-
 import Container from '../../components/Container'
 import profilePic from '/public/images/profilePic-cropped.png'
-
 import leftSideBarData from '@/utils/leftSidebarData'
 import { fonts } from '@/utils/fonts'
 import { FC, useState } from 'react'
-import { MidComponentTitles } from './types'
 import HomeSection from '@/components/sections/HomeSection'
 import WroteSection from '@/components/sections/WroteSection'
 import { motion } from 'framer-motion'
 import MadeSection from '@/components/sections/MadeSection'
 import TalkedSection from '@/components/sections/TalkedSection'
 import twitter from '/public/images/twitter.svg'
+import { MidComponentTitles } from '@/types'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
