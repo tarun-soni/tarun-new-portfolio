@@ -10,8 +10,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-source-code-pro)'],
         serif: ['var(--font-lexend-exa)'],
+        'serif-2': ['var(--font-inter)'],
       },
     },
   },
   plugins: [],
-};
+}
