@@ -118,7 +118,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
               className={`${fonts.sourceCodePro}
               text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
               tracking-widest
-              ${selectedRoute === link.title && 'text-white bg-gray-400'}
+              ${selectedRoute === link.title && 'text-white '}
                     `}>
               {link.title}
             </button>
