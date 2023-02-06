@@ -43,7 +43,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
       key={data.title}
       className={`
     bg-slate-100 
-    rounded-md m-4 flex-wrap h-30 w-96
+    rounded-md m-4 flex-wrap h-32 w-72
       bg-gradient-to-r px-2 py-2 
       cursor-pointer
       ${gradients[Math.floor(generatedGradientIndex)].from}

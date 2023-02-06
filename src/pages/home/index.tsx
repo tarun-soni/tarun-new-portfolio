@@ -40,7 +40,7 @@ const Home = () => {
             </h1>
           </button>
         </div>
-        <div className="w-10/12 lg:max-w-4xl md:max-w-2xl ">
+        <div className="w-10/12 lg:max-w-4xl md:max-w-2xl px-4">
           <div className="flex flex-col justify-center mt-20">
             <motion.h1
               key={selectedRoute}
@@ -117,7 +117,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
               onClick={() => setSelectedRoute(link.title)}
               className={`${fonts.sourceCodePro}
               text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
-              tracking-widest
+              tracking-wide
               ${selectedRoute === link.title && 'text-white '}
                     `}>
               {link.title}
