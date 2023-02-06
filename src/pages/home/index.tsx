@@ -18,7 +18,7 @@ const Home = () => {
     useState<MidComponentTitles>('/about-me')
   return (
     <div className="w-screen h-screen overflow-y-scroll">
-      <Container extendedClasses="w-10/12  mx-auto my-16  flex ">
+      <Container extendedClasses="w-8/12  mx-auto my-16  flex">
         {/* // TODO - replace the webside bar with hamburger on small devices */}
         <WebSidebar
           selectedRoute={selectedRoute}
