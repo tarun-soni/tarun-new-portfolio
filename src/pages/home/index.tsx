@@ -112,13 +112,13 @@ const WebSidebar: FC<WebSidebarProps> = ({
     <div className="flex flex-col items-center justify-center w-10/12 h-1/2 ">
       <ul className="flex flex-col w-full h-full mt-10">
         {leftSideBarData.map(link => (
-          <div className="space-y-2 my-8" key={link.title}>
+          <div className="space-y-2 my-8" key={link.path}>
             <button
               onClick={() => setSelectedRoute(link.title)}
               className={`${fonts.sourceCodePro}
-            ${selectedRoute === link.title && 'text-white'}
-                    text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
-                    tracking-widest
+              text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
+              tracking-widest
+              ${selectedRoute === link.title && 'text-white bg-gray-400'}
                     `}>
               {link.title}
             </button>
