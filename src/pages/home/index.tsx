@@ -115,9 +115,10 @@ const WebSidebar: FC<WebSidebarProps> = ({
           <div className="space-y-2 my-8" key={link.path}>
             <button
               onClick={() => setSelectedRoute(link.title)}
-              className={`${fonts.sourceCodePro}
+              className={`
+              ${fonts.sourceCodePro}
               text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
-              tracking-wide
+              tracking-wider
               ${selectedRoute === link.title && 'text-white '}
                     `}>
               {link.title}
