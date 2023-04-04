@@ -11,6 +11,8 @@ import MadeSection from '@/components/sections/MadeSection'
 import TalkedSection from '@/components/sections/TalkedSection'
 import twitter from '/public/images/twitter.svg'
 import { MidComponentTitles } from '@/types'
+import Link from 'next/link'
+import WebSidebar from '@/components/WebSidebar'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
@@ -25,9 +27,17 @@ const Home = () => {
           setSelectedRoute={setSelectedRoute}
         />
 
+        {/* <Link href="/worked" passHref prefetch={false}>
+          <h1
+            className={`text-xl font-semibold
+            italic  
+            ${fonts.sourceCodePro} text-md tracking-wide`}>
+            aaaaaa
+          </h1>
+        </Link> */}
+
         <div className="absolute  right-24 flex align-baseline ">
           <Image src={twitter} alt="twitter" width={30} height={30} />
-
           <button
             onClick={() =>
               window.open('https://twitter.com/tarun_soni_', '_blank')
@@ -72,63 +82,59 @@ const Home = () => {
 
 export default Home
 
-type WebSidebarProps = {
-  selectedRoute: MidComponentTitles
-  setSelectedRoute: React.Dispatch<React.SetStateAction<MidComponentTitles>>
-}
+// const WebSidebar: FC<WebSidebarProps> = ({
+//   selectedRoute,
+//   setSelectedRoute,
+// }) => (
+//   <div className="flex flex-col w-1/5 h-screen">
+//     <div className="flex flex-col justify-center ">
+//       <motion.button
+//         onClick={() => setSelectedRoute('/about-me')}
+//         className="w-28 h-w-28 "
+//         whileHover={{
+//           scale: 1.07,
+//         }}
+//         whileTap={{
+//           scale: 0.95,
+//         }}
+//         transition={{
+//           duration: 0.1,
+//         }}>
+//         <Image
+//           src={profilePic}
+//           alt="profile-photo"
+//           width={100}
+//           height={100}
+//           className="rounded-xl ml-2 my-4"
+//         />
+//       </motion.button>
 
-const WebSidebar: FC<WebSidebarProps> = ({
-  selectedRoute,
-  setSelectedRoute,
-}) => (
-  <div className="flex flex-col w-1/5 h-screen">
-    <div className="flex flex-col justify-center ">
-      <motion.button
-        onClick={() => setSelectedRoute('/about-me')}
-        className="w-28 h-w-28 "
-        whileHover={{
-          scale: 1.07,
-        }}
-        whileTap={{
-          scale: 0.95,
-        }}
-        transition={{
-          duration: 0.1,
-        }}>
-        <Image
-          src={profilePic}
-          alt="profile-photo"
-          width={100}
-          height={100}
-          className="rounded-xl ml-2 my-4"
-        />
-      </motion.button>
+//       <h1 className={`text-2xl font-semibold mt-10 ${fonts.lexend}`}>
+//         Tarun Soni
+//       </h1>
+//     </div>
 
-      <h1 className={`text-2xl font-semibold mt-10 ${fonts.lexend}`}>
-        Tarun Soni
-      </h1>
-    </div>
-
-    <div className="flex flex-col items-center justify-center w-10/12 h-1/2 ">
-      <ul className="flex flex-col w-full h-full mt-10">
-        {leftSideBarData.map(link => (
-          <div className="space-y-2 my-8" key={link.path}>
-            <button
-              onClick={() => setSelectedRoute(link.title)}
-              className={`
-              ${fonts.sourceCodePro}
-              text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
-              tracking-wider
-              ${selectedRoute === link.title && 'text-white '}
-                    `}>
-              {link.title}
-            </button>
-          </div>
-        ))}
-      </ul>
-    </div>
-  </div>
-)
+//     <div className="flex flex-col items-center justify-center w-10/12 h-1/2 ">
+//       <ul className="flex flex-col w-full h-full mt-10">
+//         {leftSideBarData.map(link => (
+//           <div className="space-y-2 my-8" key={link.path}>
+//             <Link
+//               href={link.path}
+//               onClick={() => setSelectedRoute(link.title)}
+//               className={`
+//               ${fonts.sourceCodePro}
+//               text-2xl font-bold text-gray-600  hover:bg-gray-400 hover:bg-opacity-20 rounded-md p-3 py-2
+//               tracking-wider
+//               ${selectedRoute === link.title && 'text-white '}
+//                     `}>
+//               {link.title}
+//             </Link>
+//           </div>
+//         ))}
+//       </ul>
+//     </div>
+//   </div>
+// )
 
 type MainSectionProps = {
   selectedRoute: MidComponentTitles

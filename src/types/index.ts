@@ -16,3 +16,7 @@ export interface CardProps<T> {
 }
 
 export type MidComponentTitles = LeftSideBarData['title'] | '/about-me'
+export type WebSidebarProps = {
+  selectedRoute: MidComponentTitles
+  setSelectedRoute: React.Dispatch<React.SetStateAction<MidComponentTitles>>
+}
