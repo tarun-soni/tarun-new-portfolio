@@ -15,4 +15,6 @@ export interface CardProps<T> {
   data: T
 }
 
-export type MidComponentTitles = LeftSideBarData['title'] | '/about-me'
+export type MidComponentTitles = LeftSideBarData['title'] | '/about'
+
+export type ViewPort = 'xs' | 'sm' | 'md' | 'lg'

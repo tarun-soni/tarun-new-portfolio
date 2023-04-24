@@ -18,7 +18,7 @@ function HomeSection() {
           duration: 0.3,
         }}
         className={`text-lg  font-medium mb-6 sm:mb-10 w-full text-gray-200 tracking-normal ${fonts.lexend} px-2`}>
-        {`Hi there! I'm Tarun Soni,`}
+        {`Hi there! I'm Tarun,`}
         <br />
         {`I make stuff for the web, and mobile.`}
         <br />
@@ -26,7 +26,7 @@ function HomeSection() {
         <Balancer>
           {`I make React apps, React Native apps, web3 stuff`}
           <br />
-          {`and sometimes write about 'em.`}
+          {`and share stuff about 'em.`}
         </Balancer>
       </motion.h4>
     </div>

@@ -1,10 +1,14 @@
 export interface LeftSideBarData {
-  title: '/wrote' | '/made' | '/talked'
+  title: '/wrote' | '/made' | '/talked' | '/about'
   path: string
   // icon: JSX.Element;
 }
 
 const leftSideBarData: LeftSideBarData[] = [
+  {
+    title: '/about',
+    path: '/about',
+  },
   {
     title: '/wrote',
     path: '/wrote',
