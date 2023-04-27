@@ -29,7 +29,9 @@ const Home = () => {
   return (
     <div className="w-screen h-screen overflow-y-scroll">
       <Container
-        extendedClasses="lg:w-10/12 w-11/12
+        extendedClasses="
+        
+        lg:w-8/12 w-11/12
        mx-auto my-16  flex 
        ">
         <WebSidebar

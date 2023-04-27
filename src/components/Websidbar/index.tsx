@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { FC } from 'react'
 import profilePic from '/public/images/profilePic-cropped.png'
 import useViewport from '@/hooks/useViewPort'
+import getFontClasses from '@/utils/getFontClasses'
 
 type WebSidebarProps = {
   selectedRoute: MidComponentTitles
@@ -18,6 +19,8 @@ const WebSidebar: FC<WebSidebarProps> = ({
   setSelectedRoute,
 }) => {
   const viewPort = useViewport()
+
+  const fontClasses = getFontClasses(viewPort)
 
   const getDynamicProfilePicWidth = (): number => {
     switch (viewPort) {
@@ -57,7 +60,10 @@ const WebSidebar: FC<WebSidebarProps> = ({
           />
         </motion.button>
 
-        <h1 className={`text-xl font-semibold mt-8  ${fonts.lexend}`}>
+        <h1
+          className={`
+           ${fontClasses}  
+        text-xl font-semibold mt-8  ${fonts.lexend}`}>
           Tarun Soni
         </h1>
       </div>
