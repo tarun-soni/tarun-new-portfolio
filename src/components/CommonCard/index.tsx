@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 import { motion } from 'framer-motion'
 import { CardProps, MadeData } from '@/types'
 import { fonts } from '@/utils/fonts'
+import useViewport from '@/hooks/useViewPort'
+import getFontClasses from '@/utils/getFontClasses'
 
 const gradients = [
   {
@@ -14,6 +16,8 @@ const gradients = [
 const generatedGradientIndex = Math.floor(Math.random() * gradients.length)
 
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
+  const viewPort = useViewport()
+  const fontClasses = getFontClasses(viewPort)
   return (
     <motion.div
       onClick={() => window.open(data.liveURL, '_blank')}
@@ -33,6 +37,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
       }}
       key={data.title}
       className={`
+      ${fontClasses}
         rounded-md m-4 flex-wrap h-32 w-72
         bg-gradient-to-r px-2 py-2 
         cursor-pointer
@@ -43,7 +48,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
         `}>
       <div className="flex flex-col justify-between h-full bg-stone-900  rounded-md p-4">
         <h4
-          className={`text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full light:text-white-800 dark:text-white-100 tracking-tight ${fonts.inter}`}>
+          className={`${fontClasses} text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full light:text-white-800 dark:text-white-100 tracking-tight ${fonts.inter}`}>
           {data.title}
         </h4>
       </div>
