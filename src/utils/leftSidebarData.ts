@@ -10,6 +10,11 @@ const leftSideBarData: LeftSideBarData[] = [
     path: '/about',
   },
   {
+    title: '/talked',
+    path: '/talked',
+    // icon: <FaIcons.FaComment />,
+  },
+  {
     title: '/wrote',
     path: '/wrote',
     // icon: <FaIcons.FaBook />,
@@ -18,11 +23,6 @@ const leftSideBarData: LeftSideBarData[] = [
     title: '/made',
     path: '/made',
     // icon: <FaIcons.FaCode />,
-  },
-  {
-    title: '/talked',
-    path: '/talked',
-    // icon: <FaIcons.FaComment />,
   },
 ]
 

@@ -13,13 +13,13 @@ import { MidComponentTitles } from '@/types'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import WebSidebar from '@/components/Websidbar'
+import TwitterButton from '@/components/TwitterButton'
+import clsx from 'clsx'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
   const [selectedRoute, setSelectedRoute] =
     useState<MidComponentTitles>('/about')
-
-  // get the current view port
 
   const viewPort = useViewport()
   console.log('viewPort --', viewPort)
@@ -28,28 +28,32 @@ const Home = () => {
   console.log('fontClasses --', fontClasses)
   return (
     <div className="w-screen h-screen overflow-y-scroll">
-      <Container extendedClasses="w-8/12  mx-auto my-16  flex">
+      <Container
+        extendedClasses="
+        
+        lg:w-8/12 w-11/12
+       mx-auto my-16  flex 
+       ">
         <WebSidebar
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
 
-        <div className="absolute  right-24 flex align-baseline ">
-          <Image src={twitter} alt="twitter" width={30} height={30} />
+        {/* TODO - refactor this twitter button position */}
+        {/* <TwitterButton /> */}
 
-          <button
-            onClick={() =>
-              window.open('https://twitter.com/tarun_soni_', '_blank')
-            }>
-            <h1
-              className={`${fontClasses} font-semibold 
-            italic
-            ${fonts.sourceCodePro} text-lg tracking-normal`}>
-              tarun_soni_
-            </h1>
-          </button>
-        </div>
-        <div className="w-10/12 lg:max-w-4xl md:max-w-2xl px-4">
+        <div
+          className="
+          h-full
+        
+        w-10/12 lg:max-w-4xl md:max-w-2xl 
+        sm:max-w-xl
+    
+        px-8
+        sm:px-8
+        lg:px-4   
+      
+        ">
           <div className="flex flex-col justify-center mt-20">
             <motion.h1
               key={selectedRoute}
@@ -64,11 +68,11 @@ const Home = () => {
               transition={{
                 duration: 0.3,
               }}
-              className={`
-                ${fonts.lexend} 
-                ${fontClasses}
-                 tracking-wide
-                `}>
+              className={clsx(
+                `${fonts.lexend}
+                ${fontClasses}`,
+                'tracking-wide',
+              )}>
               {selectedRoute}
             </motion.h1>
 
