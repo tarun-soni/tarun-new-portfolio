@@ -2,6 +2,13 @@ import { MadeData } from '@/types'
 
 const wroteData: MadeData[] = [
   {
+    title: 'From Passwords to Passkeys: Revolutionizing User Authentication',
+    tags: ['passkeys', 'authentication'],
+    liveURL:
+      'https://geekyants.com/blog/from-passwords-to-passkeys-revolutionizing-user-authentication',
+  },
+
+  {
     title: 'How To Save Gas When Writing Your Smart Contract In Solidity?',
     tags: ['web3'],
     liveURL:
