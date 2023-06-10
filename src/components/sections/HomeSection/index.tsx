@@ -3,6 +3,7 @@ import Balancer from 'react-wrap-balancer'
 import { motion } from 'framer-motion'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
+import { SocialsBar } from '@/components/SocialsBar'
 
 function HomeSection() {
   const viewPort = useViewport()
@@ -35,6 +36,9 @@ function HomeSection() {
           <br />
           {`and share stuff about 'em.`}
         </Balancer>
+        <div className="my-5 -mx-2">
+          <SocialsBar />
+        </div>
       </motion.h4>
     </div>
   )

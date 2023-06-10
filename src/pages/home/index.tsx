@@ -28,12 +28,7 @@ const Home = () => {
   console.log('fontClasses --', fontClasses)
   return (
     <div className="w-screen h-screen overflow-y-scroll">
-      <Container
-        extendedClasses="
-        
-        lg:w-8/12 w-11/12
-       mx-auto my-16  flex 
-       ">
+      <Container extendedClasses="lg:w-8/12 w-11/12 mx-auto my-16 flex">
         <WebSidebar
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
