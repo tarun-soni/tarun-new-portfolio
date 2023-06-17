@@ -7,7 +7,7 @@ import WroteSection from '@/components/sections/WroteSection'
 import { motion } from 'framer-motion'
 import MadeSection from '@/components/sections/MadeSection'
 import TalkedSection from '@/components/sections/TalkedSection'
-import twitter from '/public/images/twitter.svg'
+// import twitter from '/public/images/twitter.svg'
 import { MidComponentTitles } from '@/types'
 
 import getFontClasses from '@/utils/getFontClasses'
@@ -18,8 +18,9 @@ import clsx from 'clsx'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
-  const [selectedRoute, setSelectedRoute] =
-    useState<MidComponentTitles>('/about')
+  const [selectedRoute, setSelectedRoute] = useState<MidComponentTitles>(
+    '/about',
+  )
 
   const viewPort = useViewport()
   console.log('viewPort --', viewPort)
