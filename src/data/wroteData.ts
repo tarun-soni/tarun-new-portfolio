@@ -42,6 +42,18 @@ const wroteData: MadeData[] = [
     liveURL:
       'https://tarun-s.medium.com/a-todo-app-on-a-blockchain-using-ethereum-using-react-and-hooks-f4a751c40793',
   },
+  {
+    title: 'How to build ChatGPT powered mobile apps?',
+    liveURL:
+      'https://geekyants.com/blog/how-to-build-chatgpt-powered-mobile-apps/?utm_source=linkedin&utm_medium=social&utm_campaign=blogs&utm_content=chatgptforappdev',
+    tags: ['chatgpt', 'chatbot', 'react-native'],
+  },
+  {
+    title: 'How is AI making software development easier?',
+    liveURL:
+      'https://geekyants.com/blog/how-is-ai-making-software-development-easier/?utm_source=linkedin&utm_medium=social&utm_campaign=blogs&utm_content=aiinsoftwaredev',
+    tags: ['ai', 'software development'],
+  },
 ]
 
 export default wroteData
