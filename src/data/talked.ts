@@ -13,6 +13,15 @@ const talkedData: MadeData[] = [
     title: 'Progressive Web Apps | The GeekyAnts Talk Show',
     liveURL: 'https://www.youtube.com/watch?v=4pBrgaFoWGY',
   },
+  {
+    title: 'SVGs in React & React Native | Hack With Geeks | Episode 1',
+    liveURL: 'https://www.youtube.com/watch?v=VHa_TNOl31U',
+  },
+  {
+    liveURL: 'https://www.youtube.com/watch?v=lgo3k61f4Mk',
+    title:
+      'From Passwords To Passkeys: Revolutionizing User Authentication | GeekSpeak',
+  },
 ]
 
 export default talkedData
