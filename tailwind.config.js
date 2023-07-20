@@ -11,8 +11,9 @@ module.exports = {
         sans: ['var(--font-source-code-pro)'],
         serif: ['var(--font-lexend-exa)'],
         'serif-2': ['var(--font-inter)'],
+        'serif-3': ['var(--font-mulish)'],
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }

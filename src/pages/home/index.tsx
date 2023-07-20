@@ -18,9 +18,8 @@ import clsx from 'clsx'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
-  const [selectedRoute, setSelectedRoute] = useState<MidComponentTitles>(
-    '/about',
-  )
+  const [selectedRoute, setSelectedRoute] =
+    useState<MidComponentTitles>('/about')
 
   const viewPort = useViewport()
   console.log('viewPort --', viewPort)
