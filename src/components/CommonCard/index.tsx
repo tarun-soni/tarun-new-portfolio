@@ -35,16 +35,19 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           rounded-md   
           w-98
           m-3
-        `}>
+          border 
+ border-neutral-600 flex items-center justify-between px-3 py-4 w-full
+bg-stone-800
+`}>
         <div
-          className="flex flex-col justify-between h-full bg-stone-900  rounded-md p-4 
-          w-98
+          className="flex flex-col justify-between h-full  rounded-md p-4 
+          w-98 
         ">
           <h4
-            className={` text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+            className={`  md:text-sm text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
             {data.title}
           </h4>
-          {/* <CardAction /> */}
+          <CardAction />
         </div>
       </motion.div>
     </Container>
@@ -54,7 +57,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
 export default CommonCard
 
 const CardAction = () => (
-  <div className="flex flex-row align-bottom mt-4">
+  <div className="flex flex-row align-bottom mt-4 ">
     <div
       className={`text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
       Read
