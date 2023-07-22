@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Container from '../../components/Container'
 import { fonts } from '@/utils/fonts'
 import { FC, useState } from 'react'
@@ -13,14 +12,13 @@ import { MidComponentTitles } from '@/types'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import WebSidebar from '@/components/Websidbar'
-import TwitterButton from '@/components/TwitterButton'
+
 import clsx from 'clsx'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
-  const [selectedRoute, setSelectedRoute] = useState<MidComponentTitles>(
-    '/about',
-  )
+  const [selectedRoute, setSelectedRoute] =
+    useState<MidComponentTitles>('/talked')
 
   const viewPort = useViewport()
   console.log('viewPort --', viewPort)

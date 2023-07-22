@@ -7,14 +7,6 @@ import getFontClasses from '@/utils/getFontClasses'
 import Container from '../Container'
 import { DiagonalArrow } from '../Icons'
 
-const gradients = [
-  {
-    from: 'from-[#6EE7B7]',
-    via: 'via-[#3B82F6]',
-    to: 'to-[#9333EA]',
-  },
-]
-
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
   const fontClasses = getFontClasses(viewPort)
