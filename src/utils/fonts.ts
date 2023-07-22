@@ -1,10 +1,4 @@
-import {
-  Lexend_Exa,
-  Source_Code_Pro,
-  Inter,
-  DM_Mono,
-  DM_Sans,
-} from '@next/font/google'
+import { Lexend_Exa, Source_Code_Pro, Inter, DM_Mono } from '@next/font/google'
 
 const lexend = Lexend_Exa({
   subsets: ['latin'],
