@@ -6,6 +6,7 @@ import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import Container from '../Container'
 import { DiagonalArrow } from '../Icons'
+import useBearStore from '@/store'
 
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
@@ -61,11 +62,29 @@ export default CommonCard
 
 const CardAction = () => {
   const borderClasses = 'border-2 border-red-300 rounded px-3 py-2  w-fit -my-2'
+
+  const { selectedRoute } = useBearStore()
+
+  const getActionTitle = () => {
+    switch (selectedRoute) {
+      case '/about':
+        return null
+      case '/made':
+        return 'View'
+      case '/wrote':
+        return 'Read'
+      case '/talked':
+        return 'Watch'
+      default:
+        return null
+    }
+  }
+
   return (
     <div className="flex flex-row align-bottom mt-4 -my-2">
       <div
         className={` text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
-        Read
+        {getActionTitle()}
       </div>
       <div className="items-center">
         <DiagonalArrow />

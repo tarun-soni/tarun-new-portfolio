@@ -1,7 +1,8 @@
+import { MyRoute } from '@/types'
+
 export interface LeftSideBarData {
-  title: '/wrote' | '/made' | '/talked' | '/about'
+  title: MyRoute
   path: string
-  // icon: JSX.Element;
 }
 
 const leftSideBarData: LeftSideBarData[] = [
@@ -12,17 +13,14 @@ const leftSideBarData: LeftSideBarData[] = [
   {
     title: '/talked',
     path: '/talked',
-    // icon: <FaIcons.FaComment />,
   },
   {
     title: '/wrote',
     path: '/wrote',
-    // icon: <FaIcons.FaBook />,
   },
   {
     title: '/made',
     path: '/made',
-    // icon: <FaIcons.FaCode />,
   },
 ]
 

@@ -1,4 +1,4 @@
-import { MidComponentTitles } from '@/types'
+import { MyRoute } from '@/types'
 import { fonts } from '@/utils/fonts'
 import leftSideBarData from '@/utils/leftSidebarData'
 import { motion } from 'framer-motion'
@@ -7,10 +7,11 @@ import { FC, useState } from 'react'
 import profilePic from '/public/images/profilePic-cropped.png'
 import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
+import useBearStore from '@/store'
 
 type WebSidebarProps = {
-  selectedRoute: MidComponentTitles
-  setSelectedRoute: React.Dispatch<React.SetStateAction<MidComponentTitles>>
+  selectedRoute: MyRoute
+  setSelectedRoute: React.Dispatch<React.SetStateAction<MyRoute>>
 }
 
 const WebSidebar: FC<WebSidebarProps> = ({
@@ -21,16 +22,22 @@ const WebSidebar: FC<WebSidebarProps> = ({
   const [showSidebar, setShowSidebar] = useState(false)
   const fontClasses = getFontClasses(viewPort)
 
+  const store = useBearStore()
+
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar)
+  }
+
+  const onSideBarLinkClick = (title: MyRoute) => {
+    setShowSidebar(false)
+    setSelectedRoute(title)
+    store.setSelectedRoute(title)
   }
 
   const SidebarContent = () => {
     return (
       <div
         className={`
-
-
         flex flex-col h-full justify-center items-center ${
           showSidebar ? 'bg-stone-900 w-1/2' : 'bg-netural-900'
         }
@@ -48,10 +55,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
           {leftSideBarData.map(link => (
             <div className="my-2" key={link.path}>
               <button
-                onClick={() => {
-                  setShowSidebar(false)
-                  setSelectedRoute(link.title)
-                }}
+                onClick={() => onSideBarLinkClick(link.title)}
                 className={`
                   transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex 
                   text-lg  text-gray-600  
@@ -121,7 +125,15 @@ const HamBurger = ({ onClick }) => (
   </div>
 )
 
-const ProfilePhoto = ({ viewPort, setSelectedRoute }) => {
+type ProfilePhotoProps = {
+  viewPort: string
+  setSelectedRoute: React.Dispatch<React.SetStateAction<MyRoute>>
+}
+
+const ProfilePhoto: FC<ProfilePhotoProps> = ({
+  viewPort,
+  setSelectedRoute,
+}) => {
   const getDynamicProfilePicWidth = (): number => {
     switch (viewPort) {
       case 'xs':
