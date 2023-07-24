@@ -10,6 +10,7 @@ import { DiagonalArrow } from '../Icons'
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
   const fontClasses = getFontClasses(viewPort)
+
   return (
     <Container>
       <motion.div
@@ -36,17 +37,19 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           w-98
           m-3
           border 
- border-neutral-600 flex items-center justify-between px-3 py-4 w-full
-bg-stone-800
-`}>
+          border-neutral-600 flex items-center justify-between px-3 py-4
+          bg-stone-800
+        `}>
         <div
-          className="flex flex-col justify-between h-full  rounded-md p-4 
+          className="flex flex-col justify-between h-full  rounded-md px-3 py-2 
           w-98 
         ">
           <h4
-            className={`  md:text-sm text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+            className={`md:text-sm text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
             {data.title}
           </h4>
+          {/* Add an empty spacer to push the CardAction to the bottom */}
+          {/* <div className="flex-grow" /> */}
           <CardAction />
         </div>
       </motion.div>
@@ -56,15 +59,17 @@ bg-stone-800
 
 export default CommonCard
 
-const CardAction = () => (
-  <div className="flex flex-row align-bottom mt-4 ">
-    <div
-      className={`text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
-      Read
+const CardAction = () => {
+  const borderClasses = 'border-2 border-red-300 rounded px-3 py-2  w-fit -my-2'
+  return (
+    <div className="flex flex-row align-bottom mt-4 -my-2">
+      <div
+        className={` text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+        Read
+      </div>
+      <div className="items-center">
+        <DiagonalArrow />
+      </div>
     </div>
-
-    <div className="items-center">
-      <DiagonalArrow />
-    </div>
-  </div>
-)
+  )
+}

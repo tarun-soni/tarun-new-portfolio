@@ -13,8 +13,6 @@ import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import WebSidebar from '@/components/Websidbar'
 
-import clsx from 'clsx'
-
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
   const [selectedRoute, setSelectedRoute] =
@@ -26,15 +24,16 @@ const Home = () => {
 
   console.log('fontClasses --', fontClasses)
   return (
-    <div className="w-screen h-screen overflow-y-scroll">
+    <div
+      className="w-screen h-screen overflow-y-scroll 
+      bg-[#111010]
+      ">
+      {/* bg-[#121212] */}
       <Container extendedClasses="lg:w-8/12 w-11/12 mx-auto my-16 flex">
         <WebSidebar
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
-
-        {/* TODO - refactor this twitter button position */}
-        {/* <TwitterButton /> */}
 
         <div
           className="
@@ -62,11 +61,7 @@ const Home = () => {
               transition={{
                 duration: 0.3,
               }}
-              className={clsx(
-                `${fonts.lexend}
-                ${fontClasses}`,
-                'tracking-wide',
-              )}>
+              className={`${fonts.lexend} ${fontClasses} tracking-wide`}>
               {selectedRoute}
             </motion.h1>
 
