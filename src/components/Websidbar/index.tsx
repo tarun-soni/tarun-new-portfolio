@@ -8,6 +8,7 @@ import profilePic from '/public/images/profilePic-cropped.png'
 import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import useBearStore from '@/store'
+import { HamburgerIcon } from '../Icons'
 
 type WebSidebarProps = {
   selectedRoute: MyRoute
@@ -106,8 +107,11 @@ const WebSidebar: FC<WebSidebarProps> = ({
   )
 }
 
-const HamBurger = ({ onClick }) => (
-  <div className="md:hidden fixed top-4 right-4" onClick={onClick}>
+const HamBurger = ({ showIcon, onClick }) => (
+  <div
+    className={`${
+      showIcon && 'display-none'
+    } md:hidden fixed top-4 left-4" onClick={onClick}`}>
     <motion.div
       whileHover={{
         scale: 1.2,
@@ -118,9 +122,7 @@ const HamBurger = ({ onClick }) => (
       transition={{
         duration: 0.1,
       }}>
-      <div className="w-8 h-1 bg-gray-600 rounded-md"></div>
-      <div className="w-8 h-1 bg-gray-600 rounded-md my-1"></div>
-      <div className="w-8 h-1 bg-gray-600 rounded-md"></div>
+      <HamburgerIcon />
     </motion.div>
   </div>
 )

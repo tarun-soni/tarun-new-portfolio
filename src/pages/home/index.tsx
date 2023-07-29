@@ -12,6 +12,7 @@ import { MyRoute } from '@/types'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import WebSidebar from '@/components/Websidbar'
+import Drawer from '@/components/Drawer'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData

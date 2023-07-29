@@ -139,3 +139,16 @@ export const PauseIcon = (props: any) => (
     <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
   </svg>
 )
+
+export const HamburgerIcon = (props: any) => (
+  <svg
+    width="33"
+    height="25"
+    viewBox="0 0 33 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect width="33" height="5" rx="2.5" fill="#D9D9D9" />
+    <rect y="10" width="33" height="5" rx="2.5" fill="#D9D9D9" />
+    <rect y="20" width="33" height="5" rx="2.5" fill="#D9D9D9" />
+  </svg>
+)
