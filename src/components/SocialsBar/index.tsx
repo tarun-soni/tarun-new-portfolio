@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons'
+import { GithubIcon, LinkedInIcon, TwitterIcon, TwitterIconNew } from '../Icons'
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from '../../data/profileURLs'
 
 export const SocialsBar = () => {
@@ -8,13 +8,13 @@ export const SocialsBar = () => {
       ">
       <nav className="flex items-center">
         <div className="mr-auto">
-          <div className="flex flex-wrap items-center">
+          <div className="flex flex-wrap items-center flex-row ">
             <a
               target="_blank"
               href={TWITTER_URL}
               className="mr-1 w-max rounded-md p-2 text-lg text-[#1DA1F2]  hover:bg-gray-800"
               rel="noopener noreferrer">
-              <TwitterIcon size={25} />
+              <TwitterIconNew size={18} />
             </a>
             <a
               target="_blank"

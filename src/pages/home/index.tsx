@@ -18,13 +18,12 @@ import clsx from 'clsx'
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
   const [selectedRoute, setSelectedRoute] =
-    useState<MidComponentTitles>('/talked')
+    useState<MidComponentTitles>('/about')
 
   const viewPort = useViewport()
-  console.log('viewPort --', viewPort)
+
   const fontClasses = getFontClasses(viewPort)
 
-  console.log('fontClasses --', fontClasses)
   return (
     <div className="w-screen h-screen overflow-y-scroll">
       <Container extendedClasses="lg:w-8/12 w-11/12 mx-auto my-16 flex">
@@ -32,9 +31,6 @@ const Home = () => {
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
-
-        {/* TODO - refactor this twitter button position */}
-        {/* <TwitterButton /> */}
 
         <div
           className="
