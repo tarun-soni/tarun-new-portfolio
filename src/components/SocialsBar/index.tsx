@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedInIcon, TwitterIcon, TwitterIconNew } from '../Icons'
+import { GithubIcon, LinkedInIcon, TwitterIconNew } from '../Icons'
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from '../../data/profileURLs'
 
 export const SocialsBar = () => {
