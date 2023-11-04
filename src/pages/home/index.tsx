@@ -12,15 +12,17 @@ import { MyRoute } from '@/types'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import WebSidebar from '@/components/Websidbar'
+import useAppStore from '@/store'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
   const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/talked')
+  const { isDarkMode, setIsDarkMode } = useAppStore()
 
   const viewPort = useViewport()
 
   const fontSizeClassName = getFontClasses(viewPort)
-  const fontClasses  =`${fonts.lexend} ${fontSizeClassName} tracking-wide`
+  const fontClasses = `${fonts.lexend} ${fontSizeClassName} tracking-wide`
 
   return (
     <div className="w-screen h-screen overflow-y-scroll">
@@ -29,7 +31,6 @@ const Home = () => {
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
-
         <div
           className="
           h-full
@@ -44,7 +45,7 @@ const Home = () => {
         ">
           <div className="flex flex-col justify-center mt-20 ">
             <motion.h1
-            className={`${fontClasses}`}
+              className={`${fontClasses}`}
               key={selectedRoute}
               initial={{
                 y: 30,
@@ -56,9 +57,7 @@ const Home = () => {
               }}
               transition={{
                 duration: 0.3,
-              }}
-              >
-            
+              }}>
               {selectedRoute}
             </motion.h1>
 
