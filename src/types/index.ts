@@ -22,4 +22,6 @@ export type ViewPort = 'xs' | 'sm' | 'md' | 'lg'
 export type StoreInitialState = {
   selectedRoute: MyRoute
   setSelectedRoute: (route: MyRoute) => void
+  isDarkMode: boolean
+  setIsDarkMode: (isDarkMode: boolean) => void
 }

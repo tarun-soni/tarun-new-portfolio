@@ -7,7 +7,8 @@ import { FC, useState } from 'react'
 import profilePic from '/public/images/profilePic-cropped.png'
 import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
-import useBearStore from '@/store'
+import useAppStore from '@/store'
+import { Moon, Sun } from '../Icons'
 
 type WebSidebarProps = {
   selectedRoute: MyRoute
@@ -22,7 +23,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
   const [showSidebar, setShowSidebar] = useState(false)
   const fontClasses = getFontClasses(viewPort)
 
-  const store = useBearStore()
+  const store = useAppStore()
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar)
@@ -35,10 +36,14 @@ const WebSidebar: FC<WebSidebarProps> = ({
   }
 
   const SidebarContent = () => {
+    const { isDarkMode, setIsDarkMode } = useAppStore()
+
     return (
       <div
+        // border-2 border-red-400
         className={`
-        flex flex-col h-full justify-center items-center ${
+
+        flex flex-col h-full justify-center  ${
           showSidebar ? 'bg-stone-900 w-1/2' : 'bg-netural-900'
         }
         
@@ -58,7 +63,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
                 onClick={() => onSideBarLinkClick(link.title)}
                 className={`
                   transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex 
-                  text-lg  text-gray-600  
+                  text-xl  text-gray-600  
                   ${selectedRoute === link.title && 'text-white'}
                   ${fonts.sourceCodePro}
                   font-bold`}>
@@ -79,6 +84,37 @@ const WebSidebar: FC<WebSidebarProps> = ({
               </button>
             </div>
           ))}
+
+          {/* <ToggleButton /> */}
+
+          <div className="relative w-20 h-10 rounded-full bg-gray-400 flex items-center">
+            <button
+              className={`absolute w-10 h-10 rounded-full bg-white-100 flex items-center justify-center transition-transform transform ${
+                isDarkMode
+                  ? 'translate-x-0 transition-transform ease-in-out duration-300'
+                  : 'translate-x-full transition-transform ease-in-out duration-300'
+              }`}
+              onClick={() => setIsDarkMode(!isDarkMode)}>
+              <span className="text-skin-primary">
+                {isDarkMode ? <Moon /> : <Sun />}
+              </span>
+            </button>
+          </div>
+          <button
+            onClick={() => {
+              setIsDarkMode(!isDarkMode)
+            }}
+            // className={`
+            //       transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex
+            //       text-xl  text-gray-600
+
+            //       font-bold`}
+            style={{
+              display: 'flex',
+              marginTop: '2rem',
+            }}>
+            {isDarkMode ? <Sun /> : <Moon />}
+          </button>
         </ul>
       </div>
     )
@@ -152,3 +188,10 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
 }
 
 export default WebSidebar
+
+// const ToggleButton = () => {
+
+//   return (
+
+//   )
+// }

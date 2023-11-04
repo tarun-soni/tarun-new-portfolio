@@ -113,8 +113,8 @@ export const CommandIcon = () => (
 
 export const Moon = () => (
   <svg
-    width="1em"
-    height="1em"
+    width="1.25rem"
+    height="1.25rem"
     viewBox="0 0 24 24"
     className="text-skin-secondary">
     <path
@@ -125,8 +125,8 @@ export const Moon = () => (
 
 export const Sun = () => (
   <svg
-    width="1em"
-    height="1em"
+    width="1.25rem"
+    height="1.25rem"
     viewBox="0 0 24 24"
     className="text-skin-secondary">
     <path

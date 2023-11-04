@@ -6,13 +6,17 @@ import { createStore } from 'zustand'
 
 const store = createStore() // vanilla store without hooks
 
-const useBearStore = create<StoreInitialState>()(
+const useAppStore = create<StoreInitialState>()(
   devtools(
     persist(
       set => ({
         selectedRoute: '/about',
+        
         setSelectedRoute: route => set({ selectedRoute: route }),
+        isDarkMode:true,
+        setIsDarkMode: (isDarkMode) => set({ isDarkMode }),
       }),
+
       {
         name: 'app-store',
       },
@@ -20,5 +24,5 @@ const useBearStore = create<StoreInitialState>()(
   ),
 )
 
-export default useBearStore
+export default useAppStore
 export { store }

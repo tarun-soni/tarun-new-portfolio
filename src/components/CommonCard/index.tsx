@@ -6,7 +6,7 @@ import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import Container from '../Container'
 import { DiagonalArrow } from '../Icons'
-import useBearStore from '@/store'
+import useAppStore from '@/store'
 
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
@@ -57,7 +57,7 @@ export default CommonCard
 const CardAction = () => {
   const borderClasses = 'border-2 border-red-300 rounded px-3 py-2  w-fit -my-2'
 
-  const { selectedRoute } = useBearStore()
+  const { selectedRoute } = useAppStore()
 
   const getActionTitle = () => {
     switch (selectedRoute) {
