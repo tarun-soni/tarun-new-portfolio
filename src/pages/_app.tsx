@@ -4,7 +4,7 @@ import '../styles/globals.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics'
 import HydrationWrapper from '@/components/Hydration'
 
-const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => (
+const MyApp: AppType = ({ Component, pageProps }) => (
   <HydrationWrapper>
     <Component {...pageProps} />
     <Analytics />
