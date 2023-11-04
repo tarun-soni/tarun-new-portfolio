@@ -18,3 +18,5 @@ export interface CardProps<T> {
 export type MidComponentTitles = LeftSideBarData['title'] | '/about'
 
 export type ViewPort = 'xs' | 'sm' | 'md' | 'lg'
+
+export type TTheme = 'light' | 'dark'

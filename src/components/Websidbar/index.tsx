@@ -37,7 +37,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
   }
 
   return (
-    <div className="flex flex-col w-1/5 h-screen">
+    <div className="flex flex-col w-1/5 h-screen ">
       <div className="flex flex-col justify-center ">
         <motion.button
           onClick={() => setSelectedRoute('/about')}
@@ -77,7 +77,10 @@ const WebSidebar: FC<WebSidebarProps> = ({
                 className={clsx(
                   `transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex 
                text-lg  text-gray-600  
-               ${selectedRoute === link.title && 'text-white'}
+               ${
+                 selectedRoute === link.title &&
+                 'light:text-black  dark:text-white'
+               }
                ${fonts.sourceCodePro}
                 `,
                   {

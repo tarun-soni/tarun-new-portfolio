@@ -25,7 +25,7 @@ function HomeSection() {
         }}
         className={`
         ${fontClasses}
-        text-lg  font-medium mb-6 sm:mb-10 w-full text-gray-200 tracking-normal ${fonts.lexend} px-2`}>
+        text-lg font-medium mb-6 sm:mb-10 w-full tracking-normal ${fonts.lexend} px-2`}>
         {`Hi there! I'm Tarun,`}
         <br />
         {`I make stuff for the web, and mobile.`}

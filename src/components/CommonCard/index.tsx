@@ -37,11 +37,11 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           m-3
         `}>
         <div
-          className="flex flex-col justify-between h-full bg-stone-900  rounded-md p-4 
+          className="flex flex-col justify-between h-full bg-stone-200 rounded-md p-4 
           w-98
         ">
           <h4
-            className={` text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+            className={` text-base font-medium   dark:text-white-100 tracking-tight ${fonts.inter}`}>
             {data.title}
           </h4>
           {/* <CardAction /> */}
