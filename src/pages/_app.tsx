@@ -5,7 +5,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics'
 import HydrationWrapper from '@/components/Hydration'
 import { AppProps } from 'next/app'
 
-const MyApp: AppType = ({ Component, pageProps }: AppProps) => (
+const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => (
   <HydrationWrapper>
     <Component {...pageProps} />
     <Analytics />
