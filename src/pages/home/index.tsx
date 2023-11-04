@@ -18,10 +18,10 @@ const Home = () => {
   const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/talked')
 
   const viewPort = useViewport()
-  console.log('viewPort --', viewPort)
-  const fontClasses = getFontClasses(viewPort)
 
-  console.log('fontClasses --', fontClasses)
+  const fontSizeClassName = getFontClasses(viewPort)
+  const fontClasses  =`${fonts.lexend} ${fontSizeClassName} tracking-wide`
+
   return (
     <div className="w-screen h-screen overflow-y-scroll">
       <Container extendedClasses="lg:w-8/12 w-11/12 mx-auto my-16 flex">
@@ -29,9 +29,6 @@ const Home = () => {
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
-
-        {/* TODO - refactor this twitter button position */}
-        {/* <TwitterButton /> */}
 
         <div
           className="
@@ -45,8 +42,9 @@ const Home = () => {
         lg:px-4   
       
         ">
-          <div className="flex flex-col justify-center mt-20">
+          <div className="flex flex-col justify-center mt-20 ">
             <motion.h1
+            className={`${fontClasses}`}
               key={selectedRoute}
               initial={{
                 y: 30,
@@ -60,11 +58,7 @@ const Home = () => {
                 duration: 0.3,
               }}
               >
-              // className={clsx(
-              //   `${fonts.lexend}
-              //   ${fontClasses}`,
-              //   'tracking-wide',
-              // )}>
+            
               {selectedRoute}
             </motion.h1>
 
