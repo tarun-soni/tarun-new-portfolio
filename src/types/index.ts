@@ -15,6 +15,13 @@ export interface CardProps<T> {
   data: T
 }
 
-export type MidComponentTitles = LeftSideBarData['title'] | '/about'
+export type MyRoute = '/about' | '/talked' | '/wrote' | '/made'
 
 export type ViewPort = 'xs' | 'sm' | 'md' | 'lg'
+
+export type StoreInitialState = {
+  selectedRoute: MyRoute
+  setSelectedRoute: (route: MyRoute) => void
+  isDarkMode: boolean
+  setIsDarkMode: (isDarkMode: boolean) => void
+}

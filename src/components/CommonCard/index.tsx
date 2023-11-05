@@ -6,6 +6,7 @@ import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import Container from '../Container'
 import { DiagonalArrow } from '../Icons'
+import useAppStore from '@/store'
 
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
@@ -37,14 +38,14 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           m-3
         `}>
         <div
-          className="flex flex-col justify-between h-full bg-stone-900  rounded-md p-4 
+          className="flex flex-col justify-between h-full bg-stone-100 dark:bg-stone-800  rounded-md py-6 px-4
           w-98
         ">
           <h4
             className={` text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
             {data.title}
           </h4>
-          {/* <CardAction /> */}
+          <CardAction />
         </div>
       </motion.div>
     </Container>
@@ -53,15 +54,35 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
 
 export default CommonCard
 
-const CardAction = () => (
-  <div className="flex flex-row align-bottom mt-4">
-    <div
-      className={`text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
-      Read
-    </div>
+const CardAction = () => {
+  const borderClasses = 'border-2 border-red-300 rounded px-3 py-2  w-fit -my-2'
 
-    <div className="items-center">
-      <DiagonalArrow />
+  const { selectedRoute } = useAppStore()
+
+  const getActionTitle = () => {
+    switch (selectedRoute) {
+      case '/about':
+        return null
+      case '/made':
+        return 'View'
+      case '/wrote':
+        return 'Read'
+      case '/talked':
+        return 'Watch'
+      default:
+        return null
+    }
+  }
+
+  return (
+    <div className="flex flex-row align-bottom mt-4 -my-2">
+      <div
+        className={`underline text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+        {getActionTitle()}
+      </div>
+      <div className="items-center">
+        <DiagonalArrow />
+      </div>
     </div>
-  </div>
-)
+  )
+}

@@ -23,9 +23,13 @@ function HomeSection() {
         transition={{
           duration: 0.3,
         }}
+        // text-lg  font-medium mb-6 sm:mb-10 w-full text-gray-200 tracking-normal ${fonts.lexend} px-2`}
+
         className={`
         ${fontClasses}
-        text-lg  font-medium mb-6 sm:mb-10 w-full text-gray-200 tracking-normal ${fonts.lexend} px-2`}>
+        ${fonts.lexend}
+        tracking-normal
+        `}>
         {`Hi there! I'm Tarun,`}
         <br />
         {`I make stuff for the web, and mobile.`}

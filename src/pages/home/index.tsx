@@ -7,22 +7,22 @@ import { motion } from 'framer-motion'
 import MadeSection from '@/components/sections/MadeSection'
 import TalkedSection from '@/components/sections/TalkedSection'
 // import twitter from '/public/images/twitter.svg'
-import { MidComponentTitles } from '@/types'
+import { MyRoute } from '@/types'
 
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import WebSidebar from '@/components/Websidbar'
-
-import clsx from 'clsx'
+import useAppStore from '@/store'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
-  const [selectedRoute, setSelectedRoute] =
-    useState<MidComponentTitles>('/about')
+  const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/talked')
+  const { isDarkMode, setIsDarkMode } = useAppStore()
 
   const viewPort = useViewport()
 
-  const fontClasses = getFontClasses(viewPort)
+  const fontSizeClassName = getFontClasses(viewPort)
+  const fontClasses = `${fonts.lexend} ${fontSizeClassName} tracking-wide`
 
   return (
     <div className="w-screen h-screen overflow-y-scroll">
@@ -31,7 +31,6 @@ const Home = () => {
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
-
         <div
           className="
           h-full
@@ -44,8 +43,9 @@ const Home = () => {
         lg:px-4   
       
         ">
-          <div className="flex flex-col justify-center mt-20">
+          <div className="flex flex-col justify-center mt-20 ">
             <motion.h1
+              className={`${fontClasses}`}
               key={selectedRoute}
               initial={{
                 y: 30,
@@ -57,12 +57,7 @@ const Home = () => {
               }}
               transition={{
                 duration: 0.3,
-              }}
-              className={clsx(
-                `${fonts.lexend}
-                ${fontClasses}`,
-                'tracking-wide',
-              )}>
+              }}>
               {selectedRoute}
             </motion.h1>
 
@@ -79,7 +74,7 @@ const Home = () => {
 export default Home
 
 type MainSectionProps = {
-  selectedRoute: MidComponentTitles
+  selectedRoute: MyRoute
 }
 
 const MainSection: FC<MainSectionProps> = ({ selectedRoute }) => {
