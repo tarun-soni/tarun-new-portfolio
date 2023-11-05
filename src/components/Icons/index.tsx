@@ -1,3 +1,4 @@
+import useAppStore from '@/store'
 import { FC } from 'react'
 
 type IconProps = {
@@ -67,21 +68,25 @@ export const TwitterIcon: FC<IconProps> = ({ size = 30, ...props }) => (
   </svg>
 )
 
-export const TwitterIconNew: FC<IconProps> = ({ size = 30, ...props }) => (
-  <svg
-    {...props}
-    // width="1200" height="1227"
-    width={size}
-    height={size}
-    viewBox="0 0 1200 1227"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
-      fill="white"
-    />
-  </svg>
-)
+export const TwitterIconNew: FC<IconProps> = ({ size = 30, ...props }) => {
+  const { isDarkMode } = useAppStore()
+
+  return (
+    <svg
+      {...props}
+      // width="1200" height="1227"
+      width={size}
+      height={size}
+      viewBox="0 0 1200 1227"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+        fill={isDarkMode ? '#fff' : '#000'}
+      />
+    </svg>
+  )
+}
 export const SearchIcon: FC<IconProps> = ({ size = 30, ...props }) => (
   <svg
     {...props}
@@ -152,5 +157,18 @@ export const RightArrow = (props: any) => (
 export const PauseIcon = (props: any) => (
   <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
     <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+  </svg>
+)
+
+export const ResumeIcon = (props: any) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+      fill="none"
+      stroke="#fff"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M14 2.26v4.13c0 .56 0 .84.1 1.05 .09.18.24.34.43.43 .21.1.49.1 1.05.1h4.13m-3.74 4.99h-8m8 4h-8m2-8h-2m6-7h-5.2c-1.69 0-2.53 0-3.17.32 -.57.28-1.03.74-1.32 1.31 -.33.64-.33 1.48-.33 3.16v10.4c0 1.68 0 2.52.32 3.16 .28.56.74 1.02 1.31 1.31 .64.32 1.48.32 3.16.32h6.4c1.68 0 2.52 0 3.16-.33 .56-.29 1.02-.75 1.31-1.32 .32-.65.32-1.49.32-3.17v-9.2l-6-6Z"
+    />
   </svg>
 )

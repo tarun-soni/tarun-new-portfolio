@@ -9,6 +9,14 @@ import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import useAppStore from '@/store'
 import { Moon, Sun } from '../Icons'
+import TypographyDemo from '../Typography'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { File, FileCheck } from 'lucide-react'
+import { RESUME_URL } from '@/data/constants'
 
 type WebSidebarProps = {
   selectedRoute: MyRoute
@@ -40,7 +48,8 @@ const WebSidebar: FC<WebSidebarProps> = ({
 
     return (
       <div
-        // border-2 border-red-400
+        // border-2
+        // border-red-400
         className={`
 
         flex flex-col h-full justify-center  ${
@@ -50,46 +59,63 @@ const WebSidebar: FC<WebSidebarProps> = ({
         `}>
         {/* bg-red-500 */}
         <ProfilePhoto viewPort={viewPort} setSelectedRoute={setSelectedRoute} />
-        <h1
+
+        {/* <h1
           className={`
        ${fontClasses}  
     text-xl font-semibold mt-8  ${fonts.lexend}`}>
           Tarun Soni
-        </h1>
+        </h1> */}
+
+        <TypographyDemo type="h4" font={`${fonts.lexend}`}>
+          Tarun Soni
+        </TypographyDemo>
         <ul className="flex flex-col w-full h-full mt-8">
-          {leftSideBarData.map(link => (
-            <div className="my-2" key={link.path}>
-              <button
-                onClick={() => onSideBarLinkClick(link.title)}
-                className={`
+          {leftSideBarData.map(link => {
+            const selectedTabStyles = `p-2 rounded-sm ${
+              selectedRoute === link.title
+                ? 'bg-neutral-300 dark:bg-neutral-800'
+                : ''
+            }`
+
+            return (
+              <div className="my-4" key={link.path}>
+                {/* {link.title === selectedRoute ? (
+                  <motion.div
+                    className="absolute inset-0 dark:bg-neutral-800 rounded-md z-[-1]"
+                    layoutId="sidebar"
+                    transition={{
+                      type: 'spring',
+                      stiffness: 350,
+                      damping: 30,
+                    }}>
+                    {link.title}
+                  </motion.div>
+                ) : null} */}
+                <button onClick={() => onSideBarLinkClick(link.title)}>
+                  {/* className={`
                   transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex 
                   text-xl  text-gray-600  
                   ${selectedRoute === link.title && 'text-white'}
                   ${fonts.sourceCodePro}
-                  font-bold`}>
-                <span className="relative py-[5px] px-[10px]">
-                  {link.title}
+                  font-bold`}> */}
+                  {/* <span className="relative py-[5px] px-[10px]"> */}
+                  <TypographyDemo
+                    type="span"
+                    font={`${fonts.lexend}`}
+                    className={selectedTabStyles}>
+                    {link.title}
+                  </TypographyDemo>
 
-                  {link.path === selectedRoute ? (
-                    <motion.div
-                      className="absolute inset-0  dark:bg-neutral-800 rounded-md z-[-1]"
-                      layoutId="sidebar"
-                      transition={{
-                        type: 'spring',
-                        stiffness: 350,
-                        damping: 30,
-                      }}></motion.div>
-                  ) : null}
-                </span>
-              </button>
-            </div>
-          ))}
+                  {/* </span> */}
+                </button>
+              </div>
+            )
+          })}
 
-          {/* <ToggleButton /> */}
-
-          <div className="relative w-20 h-10 rounded-full bg-gray-400 flex items-center">
+          {/* <div className="relative w-16 h-8 rounded-full bg-gray-400 flex items-center">
             <button
-              className={`absolute w-10 h-10 rounded-full bg-white-100 flex items-center justify-center transition-transform transform ${
+              className={`absolute w-8 h-4 rounded-full bg-white-100 flex items-center justify-center transition-transform transform ${
                 isDarkMode
                   ? 'translate-x-0 transition-transform ease-in-out duration-300'
                   : 'translate-x-full transition-transform ease-in-out duration-300'
@@ -100,21 +126,72 @@ const WebSidebar: FC<WebSidebarProps> = ({
               </span>
             </button>
           </div>
-          <button
-            onClick={() => {
-              setIsDarkMode(!isDarkMode)
-            }}
-            // className={`
-            //       transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex
-            //       text-xl  text-gray-600
+           */}
 
-            //       font-bold`}
-            style={{
-              display: 'flex',
-              marginTop: '2rem',
-            }}>
-            {isDarkMode ? <Sun /> : <Moon />}
-          </button>
+          <div className="mt-5 flex w-1/2 items-center justify-start px-2">
+            <Tooltip>
+              <TooltipTrigger>
+                <button
+                  onClick={() => {
+                    setIsDarkMode(!isDarkMode)
+                  }}
+                  // className={`
+                  //       transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex
+                  //       text-xl  text-gray-600
+
+                  //       font-bold`}
+                  style={{
+                    display: 'flex',
+
+                    // marginLeft: '0.5rem',
+                  }}>
+                  {isDarkMode ? <Sun /> : <Moon />}
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <TypographyDemo
+                  type="span"
+                  font={`${fonts.inter}`}
+                  styles={{
+                    marginTop: '2rem',
+                  }}>
+                  {`${isDarkMode ? 'Light' : 'Dark'} Mode`}
+                </TypographyDemo>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger>
+                <button
+                  onClick={() => {
+                    window.open(RESUME_URL, '_blank')
+                  }}
+                  // className={`
+                  //       transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex
+                  //       text-xl  text-gray-600
+
+                  //       font-bold`}
+                  style={{
+                    display: 'flex',
+
+                    marginLeft: '1.2rem',
+                  }}>
+                  {/* {isDarkMode ? <Sun /> : <Moon />} */}
+                  {/* <CommandIcon /> */}
+                  <FileCheck width={18} />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <TypographyDemo
+                  type="span"
+                  font={`${fonts.inter}`}
+                  styles={{
+                    marginTop: '2rem',
+                  }}>
+                  View Resume
+                </TypographyDemo>
+              </TooltipContent>
+            </Tooltip>
+          </div>
         </ul>
       </div>
     )

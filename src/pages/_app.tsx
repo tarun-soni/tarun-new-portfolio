@@ -16,7 +16,8 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     const handleChange = (event: MediaQueryListEvent) => {
-      setIsDarkMode(event.matches)
+      console.log('event.matches--', event.matches)
+      // setIsDarkMode(event.matches)
     }
     mediaQuery.addEventListener('change', handleChange)
     return () => mediaQuery.removeEventListener('change', handleChange)
@@ -24,7 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const body = document.querySelector('body')
-    const isDark = body?.classList.contains('dark') ?? false
+    let isDark = body?.classList.contains('dark') ?? false
+    if (localStorage.getItem('theme') === 'dark') {
+      isDark = true
+    }
+
     setIsDarkMode(isDark)
   }, [])
 

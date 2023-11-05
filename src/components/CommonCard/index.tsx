@@ -38,7 +38,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           m-3
         `}>
         <div
-          className="flex flex-col justify-between h-full bg-stone-900  rounded-md p-4 
+          className="flex flex-col justify-between h-full bg-stone-100 dark:bg-stone-800  rounded-md py-6 px-4
           w-98
         ">
           <h4
@@ -77,7 +77,7 @@ const CardAction = () => {
   return (
     <div className="flex flex-row align-bottom mt-4 -my-2">
       <div
-        className={` text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+        className={`underline text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
         {getActionTitle()}
       </div>
       <div className="items-center">
