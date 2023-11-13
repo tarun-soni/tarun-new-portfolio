@@ -43,7 +43,7 @@ const Home = () => {
         lg:px-4   
       
         ">
-          <div className="flex flex-col justify-center mt-20 ">
+          <div className="flex flex-col justify-center xs:mt-10 mt-10 sm:mt-20">
             <motion.h1
               className={`${fontClasses}`}
               key={selectedRoute}
