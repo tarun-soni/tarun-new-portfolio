@@ -28,7 +28,7 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
     <>
       <motion.button
         onClick={() => setSelectedRoute('/about')}
-        // className="md:w-24 lg:w-48"
+        className="md:w-24 lg:w-48"
         whileHover={{
           scale: 1.07,
         }}
