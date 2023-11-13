@@ -1,5 +1,3 @@
-import { LeftSideBarData } from '@/utils/leftSidebarData'
-
 export interface MadeData {
   title?: string
   desc?: string

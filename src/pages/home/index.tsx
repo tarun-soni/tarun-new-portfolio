@@ -6,7 +6,6 @@ import WroteSection from '@/components/sections/WroteSection'
 import { motion } from 'framer-motion'
 import MadeSection from '@/components/sections/MadeSection'
 import TalkedSection from '@/components/sections/TalkedSection'
-// import twitter from '/public/images/twitter.svg'
 import { MyRoute } from '@/types'
 
 import getFontClasses from '@/utils/getFontClasses'
@@ -16,7 +15,7 @@ import useAppStore from '@/store'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
-  const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/talked')
+  const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/about')
   const { isDarkMode, setIsDarkMode } = useAppStore()
 
   const viewPort = useViewport()
@@ -26,20 +25,21 @@ const Home = () => {
 
   return (
     <div className="w-screen h-screen overflow-y-scroll">
-      <Container extendedClasses="lg:w-8/12 w-11/12 mx-auto my-16 flex">
+      <Container extendedClasses="lg:w-8/12 w-11/12 mx-auto my-16 flex  px-4">
         <WebSidebar
           selectedRoute={selectedRoute}
           setSelectedRoute={setSelectedRoute}
         />
+        {/* lg:w-10/12 lg:max-w-4xl md:max-w-2xl  */}
+
         <div
           className="
           h-full
         
-        w-10/12 lg:max-w-4xl md:max-w-2xl 
+     
         sm:max-w-xl
     
-        px-8
-        sm:px-8
+
         lg:px-4   
       
         ">

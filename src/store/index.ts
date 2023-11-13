@@ -11,10 +11,9 @@ const useAppStore = create<StoreInitialState>()(
     persist(
       set => ({
         selectedRoute: '/about',
-        
         setSelectedRoute: route => set({ selectedRoute: route }),
-        isDarkMode:true,
-        setIsDarkMode: (isDarkMode) => set({ isDarkMode }),
+        isDarkMode: true,
+        setIsDarkMode: isDarkMode => set({ isDarkMode }),
       }),
 
       {
