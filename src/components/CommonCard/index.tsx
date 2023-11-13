@@ -12,7 +12,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
   const fontClasses = getFontClasses(viewPort)
   return (
-    <Container>
+    <>
       <motion.div
         onClick={() => window.open(data.liveURL, '_blank')}
         initial={{
@@ -34,8 +34,9 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           ${fontClasses}
           cursor-pointer
           rounded-md   
-          w-98
           m-3
+          
+      w-5/6
         `}>
         <div
           className="flex flex-col justify-between h-full bg-stone-100 dark:bg-stone-800  rounded-md py-6 px-4
@@ -48,7 +49,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           <CardAction />
         </div>
       </motion.div>
-    </Container>
+    </>
   )
 }
 

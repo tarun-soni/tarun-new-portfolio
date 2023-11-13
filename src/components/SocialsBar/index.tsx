@@ -1,7 +1,15 @@
-import { GithubIcon, LinkedInIcon, TwitterIcon, TwitterIconNew } from '../Icons'
+import {
+  GithubIcon,
+  LinkedInIcon,
+  PeerlistIcon,
+  TwitterIconNew,
+} from '../Icons'
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from '../../data/profileURLs'
 
 export const SocialsBar = () => {
+  const iconClassNames =
+    'mr-1 w-max rounded-md p-2 text-lg dark:hover:bg-gray-700 hover:bg-gray-300'
+
   return (
     <div
       className="my-4 mb-12 rounded-md bg-skin-primary
@@ -12,23 +20,30 @@ export const SocialsBar = () => {
             <a
               target="_blank"
               href={TWITTER_URL}
-              className="mr-1 w-max rounded-md p-2 text-lg text-[#1DA1F2]  hover:bg-gray-800"
+              className={iconClassNames}
               rel="noopener noreferrer">
               <TwitterIconNew size={18} />
             </a>
             <a
               target="_blank"
               href={GITHUB_URL}
-              className="mr-1 w-max rounded-md p-2 text-lg hover:bg-gray-800"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              className={iconClassNames}>
               <GithubIcon size={25} />
             </a>
             <a
               target="_blank"
               href={LINKEDIN_URL}
-              className="w-max rounded-md p-2 text-lg  hover:bg-gray-800 "
-              rel="noopener noreferrer">
-              <LinkedInIcon size={25} />
+              rel="noopener noreferrer"
+              className={iconClassNames}>
+              <LinkedInIcon size={28} />
+            </a>
+            <a
+              target="_blank"
+              href={LINKEDIN_URL}
+              rel="noopener noreferrer"
+              className={iconClassNames}>
+              <PeerlistIcon size={24} />
             </a>
           </div>
         </div>
