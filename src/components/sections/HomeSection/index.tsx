@@ -28,18 +28,19 @@ function HomeSection() {
         className={`
         ${fontClasses}
         ${fonts.lexend}
+        font-thin
         tracking-normal
         `}>
-        {`Hi there! I'm Tarun,`}
+        {`Hi! I'm Tarun,`}
+
         <br />
-        {`I make stuff for the web, and mobile.`}
+
         <br />
-        <br />
-        <Balancer>
-          {`I make React apps, React Native apps, web3 stuff`}
+        <>
+          I make React and React Native apps, as well as web3 stuff.
           <br />
-          {`and share stuff about 'em.`}
-        </Balancer>
+          <br />I enjoy sharing them as well!
+        </>
         <div className="my-5 -mx-2">
           <SocialsBar />
         </div>
