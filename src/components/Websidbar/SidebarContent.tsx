@@ -113,6 +113,8 @@ const SidebarContent: FC<SidebarContentProps> = ({
         <Tooltip delayDuration={200}>
           <TooltipTrigger>
             <button
+              type="button"
+              aria-label="Toggle Theme"
               onClick={() => {
                 setIsDarkMode(!isDarkMode)
               }}
@@ -130,6 +132,8 @@ const SidebarContent: FC<SidebarContentProps> = ({
         <Tooltip>
           <TooltipTrigger>
             <button
+              type="button"
+              aria-label="View Resume"
               onClick={() => {
                 window.open(RESUME_URL, '_blank')
               }}
@@ -137,7 +141,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
               <FileCheck width={20} height={20} />
             </button>
           </TooltipTrigger>
-          <TooltipContent itemType="button" aria-label="View Resume">
+          <TooltipContent>
             <TypographyDemo
               type="span"
               font={`${fonts.inter}`}
