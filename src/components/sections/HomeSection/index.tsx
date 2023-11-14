@@ -38,7 +38,6 @@ function HomeSection() {
         <br />
         <>
           I make React and React Native apps, as well as web3 stuff.
-          <br />
           <br />I enjoy sharing them as well!
         </>
         <div className="my-5 -mx-2">
