@@ -53,8 +53,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <HydrationWrapper>
-        {/* @ts-ignore */}
         <Head />
+        {/* @ts-ignore */}
         <Component {...pageProps} />
         <Analytics />
         <GoogleAnalytics />
