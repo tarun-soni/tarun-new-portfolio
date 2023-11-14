@@ -4,7 +4,12 @@ import {
   PeerlistIcon,
   TwitterIconNew,
 } from '../Icons'
-import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL } from '../../data/profileURLs'
+import {
+  GITHUB_URL,
+  LINKEDIN_URL,
+  PEERLIST_URL,
+  TWITTER_URL,
+} from '../../data/profileURLs'
 
 export const SocialsBar = () => {
   const iconClassNames =
@@ -40,7 +45,7 @@ export const SocialsBar = () => {
             </a>
             <a
               target="_blank"
-              href={LINKEDIN_URL}
+              href={PEERLIST_URL}
               rel="noopener noreferrer"
               className={iconClassNames}>
               <PeerlistIcon size={24} />
