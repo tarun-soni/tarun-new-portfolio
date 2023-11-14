@@ -120,7 +120,8 @@ const SidebarContent: FC<SidebarContentProps> = ({
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
           </TooltipTrigger>
-          <TooltipContent>
+
+          <TooltipContent itemType="button" aria-label="Toggle Mode">
             <TypographyDemo type="span" font={`${fonts.inter}`}>
               {`${isDarkMode ? 'Light' : 'Dark'} Mode`}
             </TypographyDemo>
@@ -136,7 +137,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
               <FileCheck width={20} height={20} />
             </button>
           </TooltipTrigger>
-          <TooltipContent>
+          <TooltipContent itemType="button" aria-label="View Resume">
             <TypographyDemo
               type="span"
               font={`${fonts.inter}`}

@@ -26,28 +26,32 @@ export const SocialsBar = () => {
               target="_blank"
               href={TWITTER_URL}
               className={iconClassNames}
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              aria-label="Visitor Twitter Profile">
               <TwitterIconNew size={18} />
             </a>
             <a
               target="_blank"
               href={GITHUB_URL}
               rel="noopener noreferrer"
-              className={iconClassNames}>
+              className={iconClassNames}
+              aria-label="Visitor Github Profile">
               <GithubIcon size={25} />
             </a>
             <a
               target="_blank"
               href={LINKEDIN_URL}
               rel="noopener noreferrer"
-              className={iconClassNames}>
+              className={iconClassNames}
+              aria-label="Visitor Linkedin Profile">
               <LinkedInIcon size={28} />
             </a>
             <a
               target="_blank"
               href={PEERLIST_URL}
               rel="noopener noreferrer"
-              className={iconClassNames}>
+              className={iconClassNames}
+              aria-label="Visitor Peerlist Profile">
               <PeerlistIcon size={24} />
             </a>
           </div>
