@@ -5,6 +5,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics'
 import '../styles/globals.css'
 import useAppStore from '@/store'
 import HydrationWrapper from '@/components/Hydration'
+import Head from '@/head'
 
 export default function App({ Component, pageProps }: AppProps) {
   const { isDarkMode, setIsDarkMode } = useAppStore()
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <HydrationWrapper>
         {/* @ts-ignore */}
+        <Head />
         <Component {...pageProps} />
         <Analytics />
         <GoogleAnalytics />
