@@ -74,8 +74,8 @@ export const TwitterIconNew: FC<IconProps> = ({ size = 30, ...props }) => {
   return (
     <svg
       {...props}
-      width={size}
-      height={size}
+      width={size / 1.5}
+      height={size / 1.5}
       viewBox="0 0 1200 1227"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -139,8 +139,8 @@ export const Sun = () => (
   </svg>
 )
 
-export const DiagonalArrow = (props: any) => (
-  <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+export const DiagonalArrow: FC<IconProps> = ({ size = 30, ...props }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...props}>
     <path
       fill="currentColor"
       d="M18 7.05a1 1 0 0 0-1-1L9 6a1 1 0 0 0 0 2h5.56l-8.27 8.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0L16 9.42V15a1 1 0 0 0 1 1a1 1 0 0 0 1-1Z"></path>
