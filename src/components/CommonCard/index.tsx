@@ -82,7 +82,9 @@ const CardAction = () => {
         {getActionTitle()}
       </div>
       <div className="items-center">
-        <DiagonalArrow />
+        <div style={{ marginTop: '2px' }}>
+          <DiagonalArrow size={18} />
+        </div>
       </div>
     </div>
   )
