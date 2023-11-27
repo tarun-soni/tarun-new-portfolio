@@ -26,15 +26,8 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
 
   return (
     <>
-      <motion.button
-        onClick={() => setSelectedRoute('/about')}
+      <motion.div
         className="md:w-24 lg:w-48"
-        whileHover={{
-          scale: 1.07,
-        }}
-        whileTap={{
-          scale: 0.95,
-        }}
         transition={{
           duration: 0.1,
         }}>
@@ -45,7 +38,7 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
           height={getDynamicProfilePicWidth()}
           className="rounded-xl ml-2 my-4"
         />
-      </motion.button>
+      </motion.div>
 
       <TypographyDemo type="h5" font={`${fonts.lexend}`}>
         Tarun Soni
