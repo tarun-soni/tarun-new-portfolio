@@ -29,7 +29,7 @@ function HomeSection() {
         ${fontClasses}
         ${fonts.lexend}
         font-thin
-        tracking-wide 
+        tracking-normal 
         `}>
         {`Hi! I'm Tarun,`}
 
