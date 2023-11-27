@@ -29,7 +29,7 @@ function HomeSection() {
         ${fontClasses}
         ${fonts.lexend}
         font-thin
-        tracking-normal
+        tracking-normal 
         `}>
         {`Hi! I'm Tarun,`}
 
@@ -37,8 +37,8 @@ function HomeSection() {
 
         <br />
         <>
-          I make React and React Native apps, as well as web3 stuff.
-          <br />I enjoy sharing them as well!
+          I make experiences using React & React Native, as well as some web3
+          stuff.
         </>
         <div className="my-5 -mx-2">
           <SocialsBar />
