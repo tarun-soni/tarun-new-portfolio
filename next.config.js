@@ -10,6 +10,17 @@ const nextConfig = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: '*',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '*',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

@@ -1,0 +1,17 @@
+
+
+{
+"bracketSpacing": true,
+"jsxBracketSameLine": true,
+"singleQuote": true,
+
+
+
+
+"trailingComma": "all",
+"arrowParens": "avoid",
+"semi": false,
+
+  "plugins": ["prettier-plugin-tailwindcss"]
+  
+}
