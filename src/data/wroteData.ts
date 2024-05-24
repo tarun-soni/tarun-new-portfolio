@@ -54,6 +54,17 @@ const wroteData: MadeData[] = [
       'https://geekyants.com/blog/how-is-ai-making-software-development-easier/?utm_source=linkedin&utm_medium=social&utm_campaign=blogs&utm_content=aiinsoftwaredev',
     tags: ['ai', 'software development'],
   },
+  {
+    title: 'Introducing the useDebounce Hook',
+    tags: ['react', 'frontend', 'react-hooks'],
+    liveURL: 'https://geekyants.com/blog/introducing-the-usedebounce-hook',
+  },
+  {
+    title: 'Mastering the useThrottle Hook in React',
+    tags: ['react', 'frontend', 'react-hooks'],
+    liveURL:
+      'https://geekyants.com/blog/mastering-the-usethrottle-hook-in-react',
+  },
 ]
 
 export default wroteData
