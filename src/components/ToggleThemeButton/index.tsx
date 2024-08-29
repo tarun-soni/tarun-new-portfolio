@@ -21,7 +21,8 @@ const ToggleThemeButton = () => {
           onClick={() => {
             setIsDarkMode(!isDarkMode)
           }}
-          className={ICON_BUTTON_COMMON_STYLES}>
+          className={ICON_BUTTON_COMMON_STYLES}
+        >
           {isDarkMode ? <Sun /> : <Moon />}
         </button>
       </TooltipTrigger>

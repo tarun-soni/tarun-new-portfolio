@@ -15,7 +15,7 @@ import useAppStore from '@/store'
 
 const Home = () => {
   // set type of selectedRoute title of LeftSideBarData
-  const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/about')
+  const [selectedRoute, setSelectedRoute] = useState<MyRoute>('/made')
   const { isDarkMode, setIsDarkMode } = useAppStore()
 
   const viewPort = useViewport()
@@ -32,18 +32,8 @@ const Home = () => {
         />
         {/* lg:w-10/12 lg:max-w-4xl md:max-w-2xl  */}
 
-        <div
-          className="
-          h-full
-        
-     
-        sm:max-w-xl
-    
-
-        lg:px-4   
-      
-        ">
-          <div className="flex flex-col justify-center xs:mt-10 mt-10 sm:mt-20">
+        <div className="lg:px-4 sm:max-w-xl h-full">
+          <div className="flex flex-col justify-center mt-10 sm:mt-20 xs:mt-10">
             <motion.h1
               className={`${fontClasses}`}
               key={selectedRoute}
@@ -61,7 +51,7 @@ const Home = () => {
               {selectedRoute}
             </motion.h1>
 
-            <div className="mt-10 flex flex-wrap ">
+            <div className="flex flex-wrap mt-10">
               <MainSection selectedRoute={selectedRoute} />
             </div>
           </div>

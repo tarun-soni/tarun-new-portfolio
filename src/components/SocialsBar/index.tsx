@@ -32,7 +32,8 @@ export const SocialsBar = () => {
                 href={TWITTER_URL}
                 className={ICON_BUTTON_COMMON_STYLES}
                 rel="noopener noreferrer"
-                aria-label="Visitor Twitter Profile">
+                aria-label="Visitor Twitter Profile"
+              >
                 <TwitterIconNew size={ICON_SIZE} />
               </a>
               <a
@@ -40,7 +41,8 @@ export const SocialsBar = () => {
                 href={GITHUB_URL}
                 rel="noopener noreferrer"
                 className={ICON_BUTTON_COMMON_STYLES}
-                aria-label="Visitor Github Profile">
+                aria-label="Visitor Github Profile"
+              >
                 <GithubIcon size={ICON_SIZE} />
               </a>
               <a
@@ -48,7 +50,8 @@ export const SocialsBar = () => {
                 href={LINKEDIN_URL}
                 rel="noopener noreferrer"
                 className={ICON_BUTTON_COMMON_STYLES}
-                aria-label="Visitor Linkedin Profile">
+                aria-label="Visitor Linkedin Profile"
+              >
                 <LinkedInIcon size={ICON_SIZE} />
               </a>
               <a
@@ -56,7 +59,8 @@ export const SocialsBar = () => {
                 href={PEERLIST_URL}
                 rel="noopener noreferrer"
                 className={ICON_BUTTON_COMMON_STYLES}
-                aria-label="Visitor Peerlist Profile">
+                aria-label="Visitor Peerlist Profile"
+              >
                 <PeerlistIcon size={ICON_SIZE} />
               </a>
             </div>

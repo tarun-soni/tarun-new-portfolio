@@ -30,7 +30,8 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
         className="md:w-24 lg:w-48"
         transition={{
           duration: 0.1,
-        }}>
+        }}
+      >
         <Image
           src={profilePic}
           alt="profile-photo"

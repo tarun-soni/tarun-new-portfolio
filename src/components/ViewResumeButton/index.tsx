@@ -20,11 +20,13 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
         aria-label="View Resume"
         onClick={() => {
           window.open(RESUME_URL, '_blank')
-        }}>
+        }}
+      >
         <div
           className="flex item-center flex-row
             underline underline-offset-8
-            align-center justify-center">
+            align-center justify-center"
+        >
           <TypographyDemo
             type="span"
             font={`${fonts.sourceCodePro}`}
@@ -50,7 +52,8 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
           onClick={() => {
             window.open(RESUME_URL, '_blank')
           }}
-          className={ICON_BUTTON_COMMON_STYLES}>
+          className={ICON_BUTTON_COMMON_STYLES}
+        >
           <FileCheck width={20} height={20} />
         </button>
       </TooltipTrigger>
@@ -60,7 +63,8 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
           font={`${fonts.inter}`}
           styles={{
             marginTop: '2rem',
-          }}>
+          }}
+        >
           View Resume
         </TypographyDemo>
       </TooltipContent>

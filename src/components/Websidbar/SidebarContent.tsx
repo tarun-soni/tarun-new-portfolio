@@ -84,7 +84,8 @@ const SidebarContent: FC<SidebarContentProps> = ({
                 <TypographyDemo
                   type="span"
                   font={`${fonts.lexend}`}
-                  className={selectedTabStyles}>
+                  className={selectedTabStyles}
+                >
                   {link.title}
                 </TypographyDemo>
 

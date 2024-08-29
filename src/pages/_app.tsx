@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* @ts-ignore */}
         <Component {...pageProps} />
         <Analytics />
-        <GoogleAnalytics />
+        {/* <GoogleAnalytics /> */}
       </HydrationWrapper>
     </>
   )
