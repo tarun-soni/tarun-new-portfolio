@@ -2,6 +2,11 @@ import { MadeData } from '@/types'
 
 const talkedData: MadeData[] = [
   {
+    title:
+      'Server driven App for React and React Native | thegeekconf - BERLIN | GeekyAnts',
+    liveURL: 'https://www.youtube.com/watch?v=ed945wPEliM&',
+  },
+  {
     title: `Boosting Your React Native Apps' Performance | React Native Rundown`,
     liveURL: 'https://www.youtube.com/watch?v=5wkA3wrk_wM',
   },
