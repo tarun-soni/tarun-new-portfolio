@@ -42,7 +42,7 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
           rounded-md   
           m-3
           w-5/6
-          relative overflow-hidden bg-gray-800 h-40
+          relative overflow-hidden bg-gray-800 h-42
         `}>
         {/* {data?.imageURL && ( */}
         <Image
