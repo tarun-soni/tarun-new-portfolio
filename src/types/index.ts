@@ -7,13 +7,14 @@ export interface MadeData {
   githubURL?: string
   stack?: string[]
   tags?: string[]
+  imageURL?: string
 }
 
 export interface CardProps<T> {
   data: T
 }
 
-export type MyRoute = '/about' | '/talked' | '/wrote' | '/made'
+export type MyRoute = '/about' | '/talks' | '/blogs' | '/projects'
 
 export type ViewPort = 'xs' | 'sm' | 'md' | 'lg'
 
