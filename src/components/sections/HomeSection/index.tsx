@@ -37,8 +37,9 @@ function HomeSection() {
 
         <br />
         <>
-          I make experiences using React & React Native, as well as some web3
-          stuff.
+          I create experiences with React and React Native in addition to some
+          web3 things. I also write blogs, speak in conferences, and create
+          content.
         </>
         <div className="my-5 -mx-2">
           <SocialsBar />
