@@ -10,6 +10,9 @@ const nextConfig = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['picsum.photos', 'img.youtube.com', 'res.cloudinary.com'], // Corrected hostname
+  },
 }
 
 module.exports = nextConfig

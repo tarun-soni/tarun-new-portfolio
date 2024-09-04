@@ -7,11 +7,16 @@ import getFontClasses from '@/utils/getFontClasses'
 import Container from '../Container'
 import { DiagonalArrow } from '../Icons'
 import useAppStore from '@/store'
+import Image from 'next/image'
 import CardAction from '../CardAction'
+import TestImage from '../TestImage'
 
-const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
+const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
   const fontClasses = getFontClasses(viewPort)
+  const stylesIfImage = data?.imageURL
+    ? 'relative overflow-hidden bg-gray-800 h-36 w-96'
+    : null
   return (
     <>
       <motion.div
@@ -36,11 +41,24 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           cursor-pointer
           rounded-md   
           m-3
-      w-5/6
+          w-5/6
+          relative overflow-hidden bg-gray-800 h-40
         `}>
-        <div className="flex flex-col justify-between bg-stone-100 dark:bg-stone-800 px-4 py-6 rounded-md w-98 h-full">
+        {/* {data?.imageURL && ( */}
+        <Image
+          width={400}
+          height={500}
+          src={data.imageURL || ''}
+          alt={data.title || ''}
+          className="w-full h-full object-cover"
+        />
+
+        <div
+          className="right-0 bottom-0 left-0 absolute flex flex-col justify-end bg-gradient-to-b from-transparent to-black p-4"
+          // style={{ height: '20%' }}
+        >
           <h4
-            className={` text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+            className={`text-base font-medium text-white-100 tracking-tight ${fonts.inter} drop-shadow-md`}>
             {data.title}
           </h4>
           <CardAction />
@@ -50,4 +68,4 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   )
 }
 
-export default CommonCard
+export default CardWithImage

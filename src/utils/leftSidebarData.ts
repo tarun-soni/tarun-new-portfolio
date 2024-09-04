@@ -11,16 +11,16 @@ const leftSideBarData: LeftSideBarData[] = [
     path: '/about',
   },
   {
-    title: '/talked',
-    path: '/talked',
+    title: '/talks',
+    path: '/talks',
   },
   {
-    title: '/wrote',
-    path: '/wrote',
+    title: '/blogs',
+    path: '/blogs',
   },
   {
-    title: '/made',
-    path: '/made',
+    title: '/projects',
+    path: '/projects',
   },
 ]
 

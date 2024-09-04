@@ -32,18 +32,8 @@ const Home = () => {
         />
         {/* lg:w-10/12 lg:max-w-4xl md:max-w-2xl  */}
 
-        <div
-          className="
-          h-full
-        
-     
-        sm:max-w-xl
-    
-
-        lg:px-4   
-      
-        ">
-          <div className="flex flex-col justify-center xs:mt-10 mt-10 sm:mt-20">
+        <div className="lg:px-4 sm:max-w-xl h-full">
+          <div className="flex flex-col justify-center mt-10 sm:mt-20 xs:mt-10">
             <motion.h1
               className={`${fontClasses}`}
               key={selectedRoute}
@@ -61,7 +51,7 @@ const Home = () => {
               {selectedRoute}
             </motion.h1>
 
-            <div className="mt-10 flex flex-wrap ">
+            <div className="flex flex-wrap mt-10">
               <MainSection selectedRoute={selectedRoute} />
             </div>
           </div>
@@ -77,15 +67,16 @@ type MainSectionProps = {
   selectedRoute: MyRoute
 }
 
-const MainSection: FC<MainSectionProps> = ({ selectedRoute }) => {
+const MainSection: FC<MainSectionProps> = ({ selectedRoute }): JSX.Element => {
+  // Specify return type
   switch (selectedRoute) {
     case '/about':
       return <HomeSection />
-    case '/wrote':
+    case '/blogs':
       return <WroteSection />
-    case '/made':
+    case '/projects':
       return <MadeSection />
-    case '/talked':
+    case '/talks':
       return <TalkedSection />
     default:
       return <HomeSection />
