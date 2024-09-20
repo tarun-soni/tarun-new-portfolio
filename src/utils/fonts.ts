@@ -7,15 +7,18 @@ const lexend = Lexend_Exa({
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
+  preload: false,
   variable: '--font-source-code-pro',
 })
 
 const inter = Inter({
   subsets: ['latin'],
+  preload: false,
   variable: '--font-inter',
 })
 
 export const dmMono = DM_Mono({
+  preload: false,
   weight: '400',
 })
 
