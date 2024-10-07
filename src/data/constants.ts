@@ -1,5 +1,5 @@
-const RESUME_URL =
-  'https://drive.google.com/file/d/1HOKOgZ1FnUQQtIlALcnnkvHRoHD8qU0T/view?usp=sharing'
+const RESUME_URL = 'https://drive.google.com/file/d/17ORq2uBtW6i6JrOyYu3gl6HHNZdFUVK-/view?usp=sharing'
+
 const ICON_BUTTON_COMMON_STYLES =
   'mr-1 w-30 h-30 rounded-md p-2 text-lg dark:hover:bg-gray-700 hover:bg-gray-300'
 
