@@ -1,4 +1,10 @@
-import { Lexend_Exa, Source_Code_Pro, Inter, DM_Mono } from '@next/font/google'
+import {
+  Lexend_Exa,
+  Source_Code_Pro,
+  Inter,
+  DM_Mono,
+  Poppins,
+} from '@next/font/google'
 
 const lexend = Lexend_Exa({
   subsets: ['latin'],
@@ -22,6 +28,13 @@ export const dmMono = DM_Mono({
   weight: '400',
 })
 
+export const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
+
 // TODO - add DM Sans
 // const dmSans = DM_Sans({
 //   subsets: ['latin'],
@@ -29,6 +42,7 @@ export const dmMono = DM_Mono({
 // })
 
 export const fonts = {
+  poppins: `${poppins.variable} font-poppins`,
   lexend: `${lexend.variable} font-serif`,
   sourceCodePro: `${sourceCodePro.variable} font-sans`,
   inter: `${inter.variable} font-serif-2`,

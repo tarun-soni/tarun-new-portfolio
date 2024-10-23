@@ -10,7 +10,7 @@ function HomeSection() {
   const fontClasses = getFontClasses(viewPort)
 
   return (
-    <div className="">
+    <div>
       <motion.h4
         initial={{
           y: 30,
@@ -27,7 +27,8 @@ function HomeSection() {
 
         className={`
         ${fontClasses}
-        ${fonts.lexend}
+        ${fonts.poppins}
+        
         font-base
         tracking-normal 
         `}>
@@ -36,12 +37,13 @@ function HomeSection() {
         <br />
 
         <br />
-        <>
+
+        <h3>
           I create experiences with React and React Native in addition to some
           web3 things. <br />I write blogs, speak in conferences, and create
           content.
-        </>
-        <div className="my-5 -mx-2">
+        </h3>
+        <div className="-mx-2 my-5">
           <SocialsBar />
         </div>
       </motion.h4>

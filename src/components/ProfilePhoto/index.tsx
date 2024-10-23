@@ -36,11 +36,11 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
           alt="profile-photo"
           width={getDynamicProfilePicWidth()}
           height={getDynamicProfilePicWidth()}
-          className="rounded-xl ml-2 my-4"
+          className="my-4 ml-2 rounded-xl"
         />
       </motion.div>
 
-      <TypographyDemo type="h5" font={`${fonts.lexend}`}>
+      <TypographyDemo type="h5" font={`${fonts.poppins}`}>
         Tarun Soni
       </TypographyDemo>
     </>
