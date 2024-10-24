@@ -20,6 +20,7 @@ module.exports = {
         sans: ['var(--font-source-code-pro)'],
         serif: ['var(--font-lexend-exa)'],
         'serif-2': ['var(--font-inter)'],
+        poppins: ['var(--font-poppins)'],
       },
       colors: {
         border: 'hsl(var(--border))',

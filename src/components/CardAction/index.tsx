@@ -2,8 +2,15 @@ import useAppStore from '@/store'
 import { DiagonalArrow } from '../Icons'
 import { fonts } from '@/utils/fonts'
 
-const CardAction = () => {
+const CardAction = ({
+  variant = 'secondary',
+  bg = 'stone-400',
+}: {
+  variant?: string
+  bg?: string
+}) => {
   const borderClasses = 'border-2 border-red-300 rounded px-3 py-2  w-fit -my-2'
+  const bgClasses = variant === 'secondary' ? `bg-${bg}` : ''
 
   const { selectedRoute } = useAppStore()
 
@@ -21,11 +28,13 @@ const CardAction = () => {
         return null
     }
   }
+  console.log('bgClasses', bgClasses)
 
   return (
-    <div className="align-bottom flex flex-row -my-2 mt-4">
+    <div
+      className={`align-bottom flex flex-row -my-2 mt-4 bg-stone-00 w-fit   rounded-sm `}>
       <div
-        className={`underline text-sm font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+        className={`underline text-sm font-medium text-white tracking-tight ${fonts.inter}`}>
         {getActionTitle()}
       </div>
       <div className="items-center">
