@@ -27,12 +27,12 @@ function HomeSection() {
 
         className={`
         ${fontClasses}
-        ${fonts.poppins}
-        
+        ${fonts.inter}
+
         font-base
         tracking-normal 
         `}>
-        {`Hi! I'm Tarun,`}
+        {`Hi,👋  I'm Tarun,`}
 
         <br />
 
