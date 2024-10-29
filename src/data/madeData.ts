@@ -2,6 +2,14 @@ import { MadeData } from '@/types'
 
 const madeData: MadeData[] = [
   {
+    title: 'Time Tiles (Coming Soon)',
+    desc: 'A visual representation of of your life in weeks',
+    alt: 'life-weeks',
+    // live: 'https://life-weeks.vercel.app/',
+    liveURL: 'https://github.com/tarun-soni/time-tiles',
+    stack: ['ReactNative', 'Expo'],
+  },
+  {
     title: 'Mobile & Web app for customer care agent (NDA)',
     desc: 'A centralized dashboard for customer service agents that streamlined call forwarding, agent assignments, and conference call management',
     alt: 'customer care agent',
