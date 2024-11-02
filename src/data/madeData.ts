@@ -5,9 +5,8 @@ const madeData: MadeData[] = [
     title: 'Time Tiles (Coming Soon)',
     desc: 'A visual representation of of your life in weeks',
     alt: 'life-weeks',
-    // live: 'https://life-weeks.vercel.app/',
     liveURL: 'https://github.com/tarun-soni/time-tiles',
-    stack: ['ReactNative', 'Expo'],
+    stack: ['ReactNative', 'Expo', 'nativewind', 'gluestack-ui'],
   },
   {
     title: 'Mobile & Web app for customer care agent (NDA)',
@@ -17,12 +16,30 @@ const madeData: MadeData[] = [
     stack: ['React', 'React Native', 'Nx', 'Socket.io'],
   },
   {
+    title:
+      'Multiple Mobile apps for Dining management and table booking management',
+    desc: 'A dining management app for restaurant owners and a table booking app for customers',
+    alt: 'dining-management',
+    tags: ['company-project', 'mobile'],
+    stack: [
+      'React Native',
+      'Expo',
+      'nativewind',
+      'GraphQL',
+      'gluestack-ui',
+      'NestJS',
+      'mono-repo',
+    ],
+    liveURL:
+      'https://geekyants.com/customizable-app/build-restaurant-booking-reservation-app',
+  },
+  {
     title: 'Instagram alike E commerce app (NDA)',
 
     desc: 'An e-commerce app with a social media like interface where users can buy and sell products',
     alt: 'instagram-alike-ecommerce-app',
     tags: ['client-project', 'mobile'],
-    stack: ['React Native', 'react native video'],
+    stack: ['React Native', 'react-native-video'],
   },
   {
     title: 'Web3 File uploader and web3 login using moralis',
@@ -60,7 +77,7 @@ const madeData: MadeData[] = [
     alt: 'budget-tracker',
     live: 'https://tarun-budget-tracker.netlify.app',
     liveURL: 'https://github.com/tarun-soni/budget-tracker-frontend',
-    stack: ['MERN stack', 'Apollo GraphQl', 'Chart-js'],
+    stack: ['MERN stack', 'GraphQL', 'Chart-js'],
   },
 
   {
@@ -77,7 +94,7 @@ const madeData: MadeData[] = [
     alt: 'heaphone store',
     live: 'https://my-headphone-store.netlify.app/',
     liveURL: 'https://github.com/tarun-soni/headphone-store-frontend',
-    stack: ['React', 'Apollo GraphQl', 'recoiljs'],
+    stack: ['React', 'GraphQL', 'recoiljs'],
   },
 ]
 
