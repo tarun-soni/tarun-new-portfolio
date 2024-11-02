@@ -34,6 +34,7 @@ const Main = () => {
           <Script
             id="amplitude-init"
             onLoad={() => {
+              console.log('loaded amplitude successfully')
               window.amplitude.init(amplitudeKey, {
                 fetchRemoteConfig: true,
                 autocapture: true,
