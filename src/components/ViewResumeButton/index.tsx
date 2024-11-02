@@ -9,6 +9,7 @@ import { FileCheck } from 'lucide-react'
 import { ICON_BUTTON_COMMON_STYLES, RESUME_URL } from '@/data/constants'
 import { FC } from 'react'
 import { DiagonalArrow } from '../Icons'
+import { buttonDetails } from '@/utils/buttonDetails'
 type ViewResumeButtonProps = {
   type: 'TOOLTIP' | 'TEXT'
 }
@@ -19,12 +20,10 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
         type="button"
         aria-label="View Resume"
         onClick={() => {
+          window.amplitude.track(buttonDetails.resumeButton)
           window.open(RESUME_URL, '_blank')
         }}>
-        <div
-          className="flex item-center flex-row
-            underline underline-offset-8
-            align-center justify-center">
+        <div className="flex flex-row justify-center item-center underline underline-offset-8 align-center">
           <TypographyDemo
             type="span"
             font={`${fonts.sourceCodePro}`}
@@ -48,6 +47,7 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
           type="button"
           aria-label="View Resume"
           onClick={() => {
+            window.amplitude.track(buttonDetails.resumeButton)
             window.open(RESUME_URL, '_blank')
           }}
           className={ICON_BUTTON_COMMON_STYLES}>

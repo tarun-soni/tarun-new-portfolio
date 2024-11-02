@@ -8,6 +8,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { ICON_BUTTON_COMMON_STYLES } from '@/data/constants'
+import { buttonDetails } from '@/utils/buttonDetails'
 
 const ToggleThemeButton = () => {
   const { isDarkMode, setIsDarkMode } = useAppStore()
@@ -19,6 +20,7 @@ const ToggleThemeButton = () => {
           type="button"
           aria-label="Toggle Theme"
           onClick={() => {
+            window.amplitude.track(buttonDetails.themeButton)
             setIsDarkMode(!isDarkMode)
           }}
           className={ICON_BUTTON_COMMON_STYLES}>

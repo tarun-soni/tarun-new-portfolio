@@ -6,6 +6,7 @@ import '../styles/globals.css'
 import useAppStore from '@/store'
 import HydrationWrapper from '@/components/Hydration'
 import Head from '@/head'
+import Script from 'next/script'
 
 export default function App({ Component, pageProps }: AppProps) {
   const { isDarkMode, setIsDarkMode } = useAppStore()
@@ -29,7 +30,6 @@ export default function App({ Component, pageProps }: AppProps) {
     } else if (storedTheme === 'light') {
       isDark = false
     } else {
-      // This is the first visit, so set the default theme to dark
       isDark = true
       localStorage.setItem('theme', 'dark')
     }
@@ -54,7 +54,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <HydrationWrapper>
         <Head />
-        {/* @ts-ignore */}
         <Component {...pageProps} />
         <Analytics />
         <GoogleAnalytics />

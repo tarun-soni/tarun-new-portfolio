@@ -17,7 +17,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
   onSideBarLinkClick,
 }) => {
   const viewPort = useViewport()
-  console.log('viewPort--', viewPort)
+
   const getClassNames = (viewPort: string) => {
     switch (viewPort) {
       case 'lg':
@@ -63,7 +63,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
             <div className="my-4" key={link.path}>
               {/* {link.title === selectedRoute ? (
                 <motion.div
-                  className="absolute inset-0 dark:bg-neutral-800 rounded-md z-[-1]"
+                  className="z-[-1] absolute inset-0 dark:bg-neutral-800 rounded-md"
                   layoutId="sidebar"
                   transition={{
                     type: 'spring',
@@ -80,7 +80,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
                 ${selectedRoute === link.title && 'text-white'}
                 ${fonts.sourceCodePro}
                 font-bold`}> */}
-                {/* <span className="relative py-[5px] px-[10px]"> */}
+                {/* <span className="relative px-[10px] py-[5px]"> */}
                 <TypographyDemo
                   type="span"
                   font={`${fonts.lexend}`}
@@ -95,7 +95,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
         })}
       </ul>
 
-      <div className="md:block  flex  items-center justify-start px-2 ">
+      <div className="md:block flex justify-start items-center px-2">
         {/* <ToggleThemeButton /> */}
       </div>
     </div>

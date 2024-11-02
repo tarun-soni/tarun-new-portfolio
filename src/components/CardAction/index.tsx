@@ -28,7 +28,6 @@ const CardAction = ({
         return null
     }
   }
-  console.log('bgClasses', bgClasses)
 
   return (
     <div
