@@ -29,12 +29,23 @@ const Main = () => {
 
       {!IS_DEV && (
         <>
-          <Script src={`https://cdn.amplitude.com/script/${amplitudeKey}.js`} />
+          <Script
+            src={`https://cdn.amplitude.com/script/${amplitudeKey}.js`}
+            onLoad={() => {
+              console.log('1-loaded amplitude script successfully')
+            }}
+            onError={e => {
+              console.log('1- error loading amplitude script', e)
+            }}
+          />
 
           <Script
             id="amplitude-init"
+            onError={e => {
+              console.log('2- error loading amplitude script', e)
+            }}
             onLoad={() => {
-              console.log('loaded amplitude successfully')
+              console.log('2- loaded amplitude successfully')
               window.amplitude.init(amplitudeKey, {
                 fetchRemoteConfig: true,
                 autocapture: true,
