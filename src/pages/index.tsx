@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Home from './home'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import Script from 'next/dist/client/script'
@@ -21,7 +21,14 @@ declare global {
 const Main = () => {
   const IS_DEV = process.env.MODE === 'development'
 
-  const amplitudeKey = process.env.AMPLITUDE || ''
+  const amplitudeKey = process.env.NEXT_PUBLIC_AMPLITUDE || ''
+
+  useEffect(() => {
+    fetch('/api/amplitude')
+      .then(response => response.json())
+      .then(data => console.log('data ', data))
+      .catch(error => console.error('Error:', error))
+  }, [])
 
   return (
     <TooltipProvider>
