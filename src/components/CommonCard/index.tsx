@@ -5,7 +5,7 @@ import { fonts } from '@/utils/fonts'
 import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import CardAction from '../CardAction'
-import AppStackButton from '../AppStackButton'
+import StackTag from '../StackTag'
 
 const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
@@ -63,7 +63,7 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
               ))}
             </div>
 
-            <AppStackButton stacks={data?.stack || []} />
+            <StackTag stacks={data?.stack || []} />
             {!!data.liveURL && <CardAction />}
           </div>
         </div>
