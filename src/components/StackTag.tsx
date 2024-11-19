@@ -1,7 +1,6 @@
-import madeData from '@/data/madeData'
 import { fonts } from '@/utils/fonts'
 
-const AppStackButton = ({ stacks }: { stacks: string[] }) => {
+const StackTag = ({ stacks }: { stacks: string[] }) => {
   return (
     <div className="flex flex-wrap gap-2 mt-4">
       {stacks?.map(stack => (
@@ -15,4 +14,4 @@ const AppStackButton = ({ stacks }: { stacks: string[] }) => {
   )
 }
 
-export default AppStackButton
+export default StackTag

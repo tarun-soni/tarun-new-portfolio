@@ -15,12 +15,12 @@ const leftSideBarData: LeftSideBarData[] = [
     path: '/talks',
   },
   {
-    title: '/blogs',
-    path: '/blogs',
-  },
-  {
     title: '/projects',
     path: '/projects',
+  },
+  {
+    title: '/blogs',
+    path: '/blogs',
   },
 ]
 
