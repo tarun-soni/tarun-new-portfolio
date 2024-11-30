@@ -70,7 +70,7 @@ const Home = () => {
           </div>
         </Container>
 
-        <MadeWithLove />
+        {/* <MadeWithLove /> */}
       </div>
     </>
   )

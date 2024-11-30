@@ -4,6 +4,7 @@ import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
 import useAppStore from '@/store'
 import SidebarContent from './SidebarContent'
+import { buttonDetails } from '@/utils/buttonDetails'
 
 type WebSidebarProps = {
   selectedRoute: MyRoute
@@ -25,6 +26,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
   }
 
   const onSideBarLinkClick = (title: MyRoute) => {
+    window.amplitude.track(buttonDetails[title])
     setShowSidebar(false)
     setSelectedRoute(title)
     store.setSelectedRoute(title)
@@ -32,7 +34,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
 
   return (
     <>
-      <div className="md:block md:w-1/5 ">
+      <div className="md:block md:w-1/5">
         {/* Sidebar content goes here */}
         <SidebarContent
           setSelectedRoute={setSelectedRoute}
