@@ -26,7 +26,7 @@ const Main = () => {
   useEffect(() => {
     fetch('/api/amplitude')
       .then(response => response.json())
-      .then(data => console.log('data ', data))
+      .then(data => console.log('Fetch succssfull'))
       .catch(error => console.error('Error:', error))
   }, [])
 
@@ -39,20 +39,17 @@ const Main = () => {
           <Script
             src={`https://cdn.amplitude.com/script/${amplitudeKey}.js`}
             onLoad={() => {
-              console.log('1-loaded amplitude script successfully')
+              // console.log('1-loaded amplitude script successfully')
             }}
             onError={e => {
-              console.log('1- error loading amplitude script', e)
+              // console.log('1- error loading amplitude script', e)
             }}
           />
 
           <Script
             id="amplitude-init"
-            onError={e => {
-              console.log('2- error loading amplitude script', e)
-            }}
+            onError={e => {}}
             onLoad={() => {
-              console.log('2- loaded amplitude successfully')
               window.amplitude.init(amplitudeKey, {
                 fetchRemoteConfig: true,
                 autocapture: true,
