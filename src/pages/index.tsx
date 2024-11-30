@@ -26,7 +26,7 @@ const Main = () => {
   useEffect(() => {
     fetch('/api/amplitude')
       .then(response => response.json())
-      .then(data => console.log('Fetch succssfull'))
+      .then(data => console.log('Fetched'))
       .catch(error => console.error('Error:', error))
   }, [])
 
