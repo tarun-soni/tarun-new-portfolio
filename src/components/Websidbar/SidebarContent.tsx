@@ -62,7 +62,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
             selectedRoute === link.title
               ? 'bg-neutral-300 dark:bg-neutral-800'
               : ''
-          }`
+          } hover:bg-neutral-200 dark:hover:bg-neutral-700`
 
           return (
             <div className="my-4" key={link.path}>
