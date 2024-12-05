@@ -1,3 +1,5 @@
+'use client'
+
 import { ViewPort } from '@/types'
 import { useState, useEffect } from 'react'
 

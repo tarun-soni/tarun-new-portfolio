@@ -1,18 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: false,
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } },
-    ],
-  },
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
   images: {
-    domains: ['picsum.photos', 'img.youtube.com', 'res.cloudinary.com'], // Corrected hostname
+    domains: ['picsum.photos', 'img.youtube.com', 'res.cloudinary.com'],
   },
+  poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  headers: async () => [
+    {
+      source: '/:path*',
+      headers: [
+        {
+          key: 'X-DNS-Prefetch-Control',
+          value: 'on'
+        }
+      ]
+    }
+  ],
+  async redirects() {
+    return [
+      {
+        source: '/admin/:path*',
+        destination: '/404',
+        permanent: false,
+      },
+    ]
+  }
 }
 
 module.exports = nextConfig

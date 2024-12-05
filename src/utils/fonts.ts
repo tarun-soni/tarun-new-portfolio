@@ -4,7 +4,7 @@ import {
   Inter,
   DM_Mono,
   Poppins,
-} from '@next/font/google'
+} from "next/font/google"
 
 const lexend = Lexend_Exa({
   subsets: ['latin'],

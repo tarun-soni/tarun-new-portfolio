@@ -1,3 +1,5 @@
+'use client'
+
 import { MyRoute } from '@/types'
 import { FC, useState } from 'react'
 import useViewport from '@/hooks/useViewPort'
@@ -26,7 +28,7 @@ const WebSidebar: FC<WebSidebarProps> = ({
   }
 
   const onSideBarLinkClick = (title: MyRoute) => {
-    window.amplitude.track(buttonDetails[title])
+    window.amplitude?.track(buttonDetails[title])
     setShowSidebar(false)
     setSelectedRoute(title)
     store.setSelectedRoute(title)
@@ -35,7 +37,6 @@ const WebSidebar: FC<WebSidebarProps> = ({
   return (
     <>
       <div className="md:block md:w-1/5">
-        {/* Sidebar content goes here */}
         <SidebarContent
           setSelectedRoute={setSelectedRoute}
           selectedRoute={selectedRoute}
