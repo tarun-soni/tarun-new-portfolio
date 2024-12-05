@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import Home from './home'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import Script from 'next/dist/client/script'
+// import React, { useEffect } from 'react'
+// import Home from './home'
+// import { TooltipProvider } from '@/components/ui/tooltip'
+// import Script from 'next/dist/client/script'
 
 declare global {
   interface Window {
@@ -18,48 +18,52 @@ declare global {
   }
 }
 
-const Main = () => {
-  const IS_DEV = process.env.MODE === 'development'
+// const Main = () => {
+//   const IS_DEV = process.env.MODE === 'development'
+//   console.log('IS_DEV', IS_DEV)
+//   const amplitudeKey = process.env.NEXT_PUBLIC_AMPLITUDE || ''
 
-  const amplitudeKey = process.env.NEXT_PUBLIC_AMPLITUDE || ''
+//   useEffect(() => {
+//     fetch('/api/amplitude')
+//       .then(response => response.json())
+//       .then(data => console.log('Fetched'))
+//       .catch(error => console.error('Error:', error))
+//   }, [])
 
-  useEffect(() => {
-    fetch('/api/amplitude')
-      .then(response => response.json())
-      .then(data => console.log('Fetched'))
-      .catch(error => console.error('Error:', error))
-  }, [])
+//   return (
+//     <TooltipProvider>
+//       <Home />
 
-  return (
-    <TooltipProvider>
-      <Home />
+//       {!IS_DEV && (
+//         <>
+//           <Script
+//             src={`https://cdn.amplitude.com/script/${amplitudeKey}.js`}
+//             onLoad={() => {
+//               // console.log('1-loaded amplitude script successfully')
+//             }}
+//             onError={e => {
+//               // console.log('1- error loading amplitude script', e)
+//             }}
+//           />
 
-      {!IS_DEV && (
-        <>
-          <Script
-            src={`https://cdn.amplitude.com/script/${amplitudeKey}.js`}
-            onLoad={() => {
-              // console.log('1-loaded amplitude script successfully')
-            }}
-            onError={e => {
-              // console.log('1- error loading amplitude script', e)
-            }}
-          />
+//           <Script
+//             id="amplitude-init"
+//             onError={e => {}}
+//             onLoad={() => {
+//               window.amplitude.init(amplitudeKey, {
+//                 fetchRemoteConfig: true,
+//                 autocapture: true,
+//               })
+//             }}
+//           />
+//         </>
+//       )}
+//     </TooltipProvider>
+//   )
+// }
 
-          <Script
-            id="amplitude-init"
-            onError={e => {}}
-            onLoad={() => {
-              window.amplitude.init(amplitudeKey, {
-                fetchRemoteConfig: true,
-                autocapture: true,
-              })
-            }}
-          />
-        </>
-      )}
-    </TooltipProvider>
-  )
+// export default Main
+
+export default function Home() {
+  return <div>Hello World</div>
 }
-
-export default Main

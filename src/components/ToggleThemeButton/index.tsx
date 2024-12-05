@@ -20,7 +20,7 @@ const ToggleThemeButton = () => {
           type="button"
           aria-label="Toggle Theme"
           onClick={() => {
-            window.amplitude.track(buttonDetails.themeButton)
+            window?.amplitude?.track(buttonDetails.themeButton)
             setIsDarkMode(!isDarkMode)
           }}
           className={ICON_BUTTON_COMMON_STYLES}>

@@ -42,24 +42,24 @@ const CommonCard: FC<CardProps<MadeData>> = ({ data }) => {
           ${data.liveURL ? 'cursor-pointer' : ''}
           rounded-md   
           m-3
-      w-5/6
+          w-5/6
         `}>
         <div className="relative flex flex-col justify-between bg-stone-100 dark:bg-stone-800 px-4 py-6 rounded-md w-98 h-full">
-          <h4
-            className={` text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
+          <div
+            className={`text-base font-medium text-white-100 tracking-tight ${fonts.inter}`}>
             {data.title}
-          </h4>
+          </div>
           <div className="flex flex-col justify-between">
             <p className={`${fonts.inter} text-sm text-stone-300 mt-4`}>
               {data?.desc}
             </p>
             <div className="flex flex-wrap">
               {data?.tags?.map(tag => (
-                <h3
+                <p
                   className={`${fonts.inter} text-sm text-stone-400 whitespace-nowrap mr-2 mt-6`}
                   key={tag}>
                   #{tag}
-                </h3>
+                </p>
               ))}
             </div>
 
