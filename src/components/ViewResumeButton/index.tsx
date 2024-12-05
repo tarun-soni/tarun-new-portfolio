@@ -16,15 +16,19 @@ type ViewResumeButtonProps = {
 }
 
 const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
+  const handleClick = () => {
+    window.open(RESUME_URL, '_blank')
+    if (typeof window !== 'undefined' && window.amplitude?.track) {
+      window.amplitude.track(buttonDetails.resumeButton)
+    }
+  }
+
   if (type === 'TEXT') {
     return (
       <button
         type="button"
         aria-label="View Resume"
-        onClick={() => {
-          window.amplitude.track(buttonDetails.resumeButton)
-          window.open(RESUME_URL, '_blank')
-        }}
+        onClick={handleClick}
         className="relative group">
         <div className="flex flex-row justify-center items-center">
           <TypographyDemo
@@ -50,10 +54,7 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
         <button
           type="button"
           aria-label="View Resume"
-          onClick={() => {
-            window.amplitude.track(buttonDetails.resumeButton)
-            window.open(RESUME_URL, '_blank')
-          }}
+          onClick={handleClick}
           className={ICON_BUTTON_COMMON_STYLES}>
           <FileCheck width={20} height={20} />
         </button>

@@ -23,10 +23,10 @@ export const SocialsBar = () => {
 
   return (
     <>
-      <div className="mt-4 rounded-md bg-skin-primary ">
+      <div className="bg-skin-primary mt-4 rounded-md">
         <nav className="flex items-center">
           <div className="mr-auto">
-            <div className="flex flex-wrap items-center flex-row gap-x-1">
+            <div className="flex flex-row flex-wrap items-center gap-x-1">
               <a
                 target="_blank"
                 href={TWITTER_URL}
