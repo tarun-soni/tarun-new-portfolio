@@ -28,7 +28,7 @@ function HomeSection() {
           font-base
           tracking-normal 
         `}>
-        <h1 className="mb-6 font-medium text-2xl">Hi,&apos;👋 I&apos;m Tarun,</h1>
+        <h1 className="mb-6 font-medium text-2xl">Hi, 👋 I&apos;m Tarun,</h1>
 
         <div className="mt-6 text-lg">
           <p>
