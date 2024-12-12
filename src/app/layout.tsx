@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import Providers from '@/components/Providers'
 import ThemeProvider from '@/components/ThemeProvider'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+
 export const metadata: Metadata = {
   title: "Tarun's Portfolio",
   description:
@@ -57,13 +58,14 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="theme-color" content="#000000" />
-        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <Providers>
-          <SpeedInsights />
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            {children}
+            <SpeedInsights />
+          </ThemeProvider>
         </Providers>
       </body>
     </html>
