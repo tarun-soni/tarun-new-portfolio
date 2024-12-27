@@ -2,6 +2,13 @@ import { MadeData } from '@/types'
 
 const wroteData: MadeData[] = [
   {
+    title:
+      'Implementing Right-to-Left (RTL) Support in Expo Without Restarting the App',
+    tags: ['Expo', 'React Native', 'i18n', 'internationalization'],
+    liveURL:
+      'https://geekyants.com/blog/implementing-right-to-left-rtl-support-in-expo-without-restarting-the-app',
+  },
+  {
     title: 'From Passwords to Passkeys: Revolutionizing User Authentication',
     tags: ['passkeys', 'authentication'],
     liveURL:
