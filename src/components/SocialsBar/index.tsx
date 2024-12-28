@@ -63,9 +63,9 @@ export const SocialsBar = () => {
           </div>
         </nav>
       </div>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <ViewResumeButton type="TEXT" />
-      </div>
+      </div> */}
     </>
   )
 }

@@ -8,36 +8,37 @@ const baseURL =
 const talkedData: MadeData[] = [
   {
     title:
-      'Server driven App for React and React Native | thegeekconf - BERLIN | GeekyAnts',
+      'Server driven App for React and React Native at thegeekconf - Berlin.',
     liveURL: 'https://www.youtube.com/watch?v=ed945wPEliM&',
 
     imageURL: `${baseURL}/qgqn4imf56nunpynfxpu.jpg`,
+    event: 'thegeekconf - BERLIN',
   },
   {
-    title: `Boosting Your React Native Apps' Performance | React Native Rundown`,
+    title: `Boosting Your React Native Apps' Performance | React Native Rundown.`,
 
     imageURL: `${baseURL}/nymmf83r0nbgh0qvwszq.jpg`,
   },
   {
-    title: 'The state of expo ecosystem in 2022',
+    title: 'The state of expo ecosystem in 2022.',
     liveURL: 'https://www.youtube.com/live/SpuLPE9bVG8?feature=share&t=5842',
 
     imageURL: `${baseURL}/iqwur0nejdf5yoq4mf8j.jpg`,
   },
   {
-    title: 'Progressive Web Apps | The GeekyAnts Talk Show',
+    title: 'Progressive Web Apps | The GeekyAnts Talk Show.',
     liveURL: 'https://www.youtube.com/watch?v=4pBrgaFoWGY',
     imageURL: `${baseURL}/zqb3fhbmjwxzjnv5jkfr.jpg`,
   },
   {
-    title: 'SVGs in React & React Native | Hack With Geeks | Episode 1',
+    title: 'SVGs in React & React Native | Hack With Geeks | Episode 1.',
     liveURL: 'https://www.youtube.com/watch?v=VHa_TNOl31U',
     imageURL: `${baseURL}/lnhc69s4yaeamvdbrzcw.jpg`,
   },
   {
     liveURL: 'https://www.youtube.com/watch?v=lgo3k61f4Mk',
     title:
-      'From Passwords To Passkeys: Revolutionizing User Authentication | GeekSpeak',
+      'From Passwords To Passkeys: Revolutionizing User Authentication | GeekSpeak.',
 
     imageURL: `${baseURL}/vfmxr9ul79atjnzjfbzr.jpg`,
   },
