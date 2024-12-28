@@ -8,6 +8,7 @@ export interface MadeData {
   stack?: string[]
   tags?: string[]
   imageURL?: string
+  event?: string
 }
 
 export interface CardProps<T> {

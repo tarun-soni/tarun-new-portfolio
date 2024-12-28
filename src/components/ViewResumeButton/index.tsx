@@ -34,7 +34,7 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
           <TypographyDemo
             type="span"
             font={`${fonts.sourceCodePro} `}
-            className="relative text-lg tracking-normal">
+            className="relative text-xl tracking-normal">
             <span className="relative">
               Resume
               <span className="group-hover:w-full bottom-0 left-0 absolute bg-current w-0 h-[2px] transition-all duration-300" />

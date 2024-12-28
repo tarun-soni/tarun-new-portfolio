@@ -3,7 +3,7 @@ import { MadeData } from '@/types'
 const wroteData: MadeData[] = [
   {
     title:
-      'Implementing Right-to-Left (RTL) Support in Expo Without Restarting the App',
+      'Implementing Right-to-Left (RTL) Support in Expo Without Restarting the App.',
     tags: ['Expo', 'React Native', 'i18n', 'internationalization'],
     liveURL:
       'https://geekyants.com/blog/implementing-right-to-left-rtl-support-in-expo-without-restarting-the-app',
@@ -23,14 +23,14 @@ const wroteData: MadeData[] = [
   },
 
   {
-    title: 'A Robust Development Stack for Your next dApp',
+    title: 'A Robust Development Stack for Your next dApp.',
     tags: ['web3', 'state mangement'],
     liveURL:
       'https://techblog.geekyants.com/a-robust-development-stack-for-your-next-dapp',
   },
 
   {
-    title: 'recoil-js (A much simpler state management library)',
+    title: 'recoil-js (A much simpler state management library).',
     tags: ['recoiljs', 'state mangement'],
     liveURL:
       'https://tarun-s.medium.com/recoil-js-a-much-simpler-state-management-library-de3bc4f021e2',

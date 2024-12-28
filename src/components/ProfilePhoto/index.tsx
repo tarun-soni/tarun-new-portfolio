@@ -36,7 +36,7 @@ const ProfilePhoto: FC<ProfilePhotoProps> = ({
           alt="profile-photo"
           width={getDynamicProfilePicWidth()}
           height={getDynamicProfilePicWidth()}
-          className="my-4 ml-2 rounded-xl"
+          className="my-4 rounded-xl"
         />
       </motion.div>
 
