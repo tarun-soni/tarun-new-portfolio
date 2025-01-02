@@ -7,6 +7,7 @@ import talkedData from '@/data/talked'
 import wroteData from '@/data/wroteData'
 import ViewResumeButton from '@/components/ViewResumeButton'
 import MotionDiv from '@/components/MotionDiv'
+import LatestData from './LatestData'
 
 function HomeSection() {
   const viewPort = useViewport()
@@ -47,29 +48,3 @@ function HomeSection() {
   )
 }
 export default HomeSection
-
-const LatestData = () => {
-  return (
-    <>
-      <div className={`mt-6 text-md  ${fonts.inter}`}>
-        <p>Latest talk </p>
-
-        <a
-          href={talkedData[0].liveURL}
-          className="text-blue-500 hover:text-blue-700 transition-all duration-300">
-          {talkedData[0].title}
-        </a>
-
-        <div className="mt-2">
-          <p>Latest blog </p>
-
-          <a
-            href={wroteData[0].liveURL}
-            className="text-blue-500 hover:text-blue-700 transition-all duration-300">
-            {wroteData[0].title}
-          </a>
-        </div>
-      </div>
-    </>
-  )
-}
