@@ -12,7 +12,7 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
   const fontClasses = getFontClasses(viewPort)
   const stylesIfImage = data?.imageURL
-    ? 'relative overflow-hidden bg-gray-800 h-36 w-96'
+    ? 'relative overflow-hidden bg-gray-800 w-400 h-500'
     : null
 
   const [isImageLoading, setIsImageLoading] = useState(true)
@@ -41,13 +41,12 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
           cursor-pointer
           rounded-md   
           m-3
-          w-5/6
-          relative overflow-hidden bg-gray-800 h-42
+          ${stylesIfImage}
         `}>
         {isImageLoading && <CardShimmer />}
 
         <Image
-          width={500}
+          width={400}
           height={500}
           src={data.imageURL || ''}
           alt={data.title || ''}
