@@ -1,15 +1,12 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { motion } from 'framer-motion'
 import { CardProps, MadeData } from '@/types'
 import { fonts } from '@/utils/fonts'
 import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
-import Container from '../Container'
-import { DiagonalArrow } from '../Icons'
-import useAppStore from '@/store'
 import Image from 'next/image'
 import CardAction from '../CardAction'
-import TestImage from '../TestImage'
+import { cn } from '@/utils'
 
 const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
   const viewPort = useViewport()
@@ -17,6 +14,9 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
   const stylesIfImage = data?.imageURL
     ? 'relative overflow-hidden bg-gray-800 h-36 w-96'
     : null
+
+  const [isImageLoading, setIsImageLoading] = useState(true)
+
   return (
     <>
       <motion.div
@@ -44,24 +44,28 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
           w-5/6
           relative overflow-hidden bg-gray-800 h-42
         `}>
-        {/* {data?.imageURL && ( */}
+        {isImageLoading && <CardShimmer />}
+
         <Image
-          width={400}
+          width={500}
           height={500}
           src={data.imageURL || ''}
           alt={data.title || ''}
-          className="w-full h-full object-cover"
+          className={cn(
+            'object-cover transition-opacity',
+            isImageLoading ? 'opacity-0' : 'opacity-100',
+          )}
+          onLoadingComplete={() => setIsImageLoading(false)}
         />
 
-        <div
-          className="right-0 bottom-0 left-0 absolute flex flex-col justify-end bg-gradient-to-b from-transparent to-black p-4"
-          // style={{ height: '20%' }}
-        >
+        <div className="right-0 bottom-0 left-0 absolute flex flex-col justify-end bg-gradient-to-b from-transparent to-black px-4">
           <h4
             className={`text-base font-medium text-white-100 tracking-tight ${fonts.inter} drop-shadow-md`}>
             {data.title}
           </h4>
-          <CardAction />
+          <div className="mb-6">
+            <CardAction />
+          </div>
         </div>
       </motion.div>
     </>
@@ -69,3 +73,6 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
 }
 
 export default CardWithImage
+const CardShimmer = () => (
+  <div className="opacity-50 absolute inset-0 bg-gradient-to-r from-transparent to-gray-100 animate-shimmer-fast" />
+)
