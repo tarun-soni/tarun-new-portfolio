@@ -1,15 +1,14 @@
+'use client'
+
 import { fonts } from '@/utils/fonts'
-import { motion } from 'framer-motion'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import { SocialsBar } from '@/components/SocialsBar'
-import talkedData from '@/data/talked'
-import wroteData from '@/data/wroteData'
 import ViewResumeButton from '@/components/ViewResumeButton'
 import MotionDiv from '@/components/MotionDiv'
 import LatestData from './LatestData'
 
-function HomeSection() {
+export default function HomeSection() {
   const viewPort = useViewport()
   const fontClasses = getFontClasses(viewPort)
 
@@ -47,4 +46,3 @@ function HomeSection() {
     </>
   )
 }
-export default HomeSection

@@ -1,3 +1,5 @@
+'use client'
+
 import { fonts } from '@/utils/fonts'
 import TypographyDemo from '../Typography'
 import {

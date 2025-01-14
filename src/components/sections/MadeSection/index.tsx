@@ -1,7 +1,7 @@
 import CommonCard from '@/components/CommonCard'
 import madeData from '@/data/madeData'
 
-function MadeSection() {
+export default function MadeSection() {
   return (
     <>
       {madeData.map(data => (
@@ -10,4 +10,3 @@ function MadeSection() {
     </>
   )
 }
-export default MadeSection

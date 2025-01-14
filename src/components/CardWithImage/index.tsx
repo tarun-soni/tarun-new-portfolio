@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC, useState } from 'react'
 import { motion } from 'framer-motion'
 import { CardProps, MadeData } from '@/types'

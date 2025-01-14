@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['picsum.photos', 'img.youtube.com', 'res.cloudinary.com'],
+    domains: [
+      'picsum.photos',
+      'img.youtube.com',
+      'res.cloudinary.com',
+      'api.microlink.io',
+    ],
   },
   poweredByHeader: false,
   reactStrictMode: true,
@@ -12,10 +17,10 @@ const nextConfig = {
       headers: [
         {
           key: 'X-DNS-Prefetch-Control',
-          value: 'on'
-        }
-      ]
-    }
+          value: 'on',
+        },
+      ],
+    },
   ],
   async redirects() {
     return [
@@ -25,7 +30,7 @@ const nextConfig = {
         permanent: false,
       },
     ]
-  }
+  },
 }
 
 module.exports = nextConfig

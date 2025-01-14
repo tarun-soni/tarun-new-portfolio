@@ -1,3 +1,5 @@
+'use client'
+
 import {
   GithubIcon,
   LinkedInIcon,
