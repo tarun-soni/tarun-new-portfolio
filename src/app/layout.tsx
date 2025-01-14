@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import Providers from '@/components/Providers'
 import ThemeProvider from '@/components/ThemeProvider'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { inter, sourceCodePro, lexend } from '@/styles/fonts'
 
 export const metadata: Metadata = {
   title: "Tarun's Portfolio",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
   },
   verification: {
-    google: 'your-google-site-verification', // Add your Google verification code
+    google: 'your-google-site-verification',
   },
 }
 
@@ -51,7 +52,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${inter.variable} ${sourceCodePro.variable} ${lexend.variable}`}>
       <head>
         <meta
           name="viewport"
@@ -60,7 +63,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body className="font-sans">
         <Providers>
           <ThemeProvider>
             {children}

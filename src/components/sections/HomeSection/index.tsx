@@ -1,6 +1,5 @@
 'use client'
 
-import { fonts } from '@/utils/fonts'
 import getFontClasses from '@/utils/getFontClasses'
 import useViewport from '@/hooks/useViewPort'
 import { SocialsBar } from '@/components/SocialsBar'
@@ -18,8 +17,7 @@ export default function HomeSection() {
         <MotionDiv
           className={`
           ${fontClasses}
-          ${fonts.inter}
-          font-base
+          font-sans
           tracking-normal 
         `}>
           <h1 className="mb-6 font-medium text-2xl">Hi, 👋 I&apos;m Tarun,</h1>

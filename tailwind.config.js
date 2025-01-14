@@ -17,10 +17,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-source-code-pro)'],
-        serif: ['var(--font-lexend-exa)'],
-        'serif-2': ['var(--font-inter)'],
-        poppins: ['var(--font-poppins)'],
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-source-code-pro)'],
+        lexend: ['var(--font-lexend)'],
       },
       colors: {
         border: 'hsl(var(--border))',

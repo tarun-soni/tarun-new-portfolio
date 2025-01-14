@@ -1,6 +1,5 @@
 'use client'
 
-import { fonts } from '@/utils/fonts'
 import TypographyDemo from '../Typography'
 import {
   Tooltip,
@@ -35,7 +34,7 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
         <div className="flex flex-row justify-center items-center">
           <TypographyDemo
             type="span"
-            font={`${fonts.sourceCodePro} `}
+            font="font-mono"
             className="relative text-xl tracking-normal">
             <span className="relative">
               Resume
@@ -62,12 +61,7 @@ const ViewResumeButton: FC<ViewResumeButtonProps> = ({ type = 'TEXT' }) => {
         </button>
       </TooltipTrigger>
       <TooltipContent>
-        <TypographyDemo
-          type="span"
-          font={`${fonts.inter}`}
-          styles={{
-            marginTop: '2rem',
-          }}>
+        <TypographyDemo type="span" font="font-sans" className="mt-8">
           View Resume
         </TypographyDemo>
       </TooltipContent>

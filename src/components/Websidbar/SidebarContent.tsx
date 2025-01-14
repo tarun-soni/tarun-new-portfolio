@@ -1,7 +1,6 @@
 'use client'
 
 import { MyRoute } from '@/types'
-import { fonts } from '@/utils/fonts'
 import leftSideBarData from '@/utils/leftSidebarData'
 import { FC } from 'react'
 import useViewport from '@/hooks/useViewPort'
@@ -71,7 +70,7 @@ const SidebarContent: FC<SidebarContentProps> = ({
                 onClick={() => onSideBarLinkClick(link.title)}>
                 <TypographyDemo
                   type="span"
-                  font={`${fonts.lexend}`}
+                  font="font-lexend"
                   className={selectedTabStyles}>
                   {link.title}
                 </TypographyDemo>
