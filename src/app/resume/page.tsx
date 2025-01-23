@@ -8,10 +8,7 @@ const ResumePage = () => {
   const router = useRouter()
   useEffect(() => {
     window.open(RESUME_URL, '_blank')
-
-    return () => {
-      router.replace('/')
-    }
+    router.replace('/')
   }, [])
 
   return null
