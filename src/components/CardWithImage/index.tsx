@@ -6,7 +6,7 @@ import { CardProps, MadeData } from '@/types'
 import { fonts } from '@/utils/fonts'
 import useViewport from '@/hooks/useViewPort'
 import getFontClasses from '@/utils/getFontClasses'
-import Image from 'next/image'
+import OptimizedImage from '../OptimizedImage'
 import CardAction from '../CardAction'
 import { cn } from '@/utils'
 
@@ -16,8 +16,6 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
   const stylesIfImage = data?.imageURL
     ? 'relative overflow-hidden bg-gray-800 w-400 h-500'
     : null
-
-  const [isImageLoading, setIsImageLoading] = useState(true)
 
   return (
     <>
@@ -38,25 +36,17 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
           scale: 1.02,
         }}
         key={data.title}
-        className={`
-          ${fontClasses}
-          cursor-pointer
-          rounded-md   
-          m-3
-          ${stylesIfImage}
-        `}>
-        {isImageLoading && <CardShimmer />}
-
-        <Image
-          width={400}
-          height={500}
+        className={cn(
+          fontClasses,
+          'cursor-pointer rounded-md m-3',
+          stylesIfImage,
+        )}>
+        <OptimizedImage
           src={data.imageURL || ''}
           alt={data.title || ''}
-          className={cn(
-            'object-cover transition-opacity',
-            isImageLoading ? 'opacity-0' : 'opacity-100',
-          )}
-          onLoadingComplete={() => setIsImageLoading(false)}
+          width={400}
+          height={500}
+          className="object-cover"
         />
 
         <div className="right-0 bottom-0 left-0 absolute flex flex-col justify-end bg-gradient-to-b from-transparent to-black px-4">
@@ -74,6 +64,3 @@ const CardWithImage: FC<CardProps<MadeData>> = ({ data }) => {
 }
 
 export default CardWithImage
-const CardShimmer = () => (
-  <div className="opacity-50 absolute inset-0 bg-gradient-to-r from-transparent to-gray-100 animate-shimmer-fast" />
-)

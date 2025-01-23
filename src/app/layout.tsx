@@ -28,7 +28,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     images: [
-      'https://res.cloudinary.com/dro3nqmss/image/upload/e_sharpen:50/e_upscale/tarun-new-portfolio/dhlzig9wqsenzywaeibv.jpg',
+      {
+        url: 'https://res.cloudinary.com/dro3nqmss/image/upload/f_auto,q_auto:good/e_sharpen:50/e_upscale/tarun-new-portfolio/dhlzig9wqsenzywaeibv.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Tarun's Portfolio",
+      },
     ],
   },
   twitter: {
@@ -37,7 +42,12 @@ export const metadata: Metadata = {
     description: 'Showcasing skills, talks, and projects by Tarun Soni.',
     creator: '@TarunSoni',
     images: [
-      'https://res.cloudinary.com/dro3nqmss/image/upload/e_sharpen:50/e_upscale/tarun-new-portfolio/dhlzig9wqsenzywaeibv.jpg',
+      {
+        url: 'https://res.cloudinary.com/dro3nqmss/image/upload/f_auto,q_auto:good/e_sharpen:50/e_upscale/tarun-new-portfolio/dhlzig9wqsenzywaeibv.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Tarun's Portfolio",
+      },
     ],
   },
   verification: {
