@@ -37,9 +37,9 @@ export default function HomeSection() {
           </div>
         </MotionDiv>
       </div>
-      <MotionDiv className="mt-2">
+      {/* <MotionDiv className="mt-2">
         <ViewResumeButton type="TEXT" />
-      </MotionDiv>
+      </MotionDiv> */}
       <MotionDiv className="mt-10">
         <LatestData />
       </MotionDiv>
